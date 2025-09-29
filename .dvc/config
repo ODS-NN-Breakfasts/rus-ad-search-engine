@@ -1,2 +1,6 @@
 [core]
     analytics = false
+    remote = data_server
+['remote "data_server"']
+    url = ssh://sftp_agent_u@178.72.130.18:22
+    allow_agent = false
