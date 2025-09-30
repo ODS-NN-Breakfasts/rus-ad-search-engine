@@ -5,3 +5,17 @@ This is a main design document to document design principles, system architectur
 ## Review of Text Processing Tools
 
 `TBD`
+
+### Word Embeddings
+
+#### Word2Vec
+    
+| Library                                                            | Licence  | Languages   | Models                                                 | Model Licences | OOV | Comment                                    |
+|--------------------------------------------------------------------|----------|-------------|--------------------------------------------------------|----------------|-----|--------------------------------------------|
+| [gensim](https://radimrehurek.com/gensim/auto_examples/index.html) | LGPL-2.1 | rus<br/>eng | word2vec-ruscorpora-300 <br/> word2vec-google-news-300 | CC-BY <br/>  ? | No  | rus - with POS-tags                        |
+| [flair](https://flairnlp.github.io/docs/intro)                     | MIT      | rus<br/>eng | ruwikiruscorpora_upos_cbow_300_10_2021  <br/> ?        | CC-BY <br/>  ? | No  | Only text format, <br/> Tokenizes POS-tags | 
+
+#### FastText
+
+#### GloVe
+
