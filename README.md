@@ -1,6 +1,8 @@
 # Search Engine for Russian Advertisements
 
-All operations for project development and maintenance should be described on [Wiki page](https://github.com/ODS-NN-Breakfasts/rus-ad-search-engine/wiki).
+All design-related information is in [System Design Document](research/DESIGN.md).
+
+All operations for project development and maintenance are described on [Wiki page](https://github.com/ODS-NN-Breakfasts/rus-ad-search-engine/wiki).
 
 ## Directory and File Structure
 
