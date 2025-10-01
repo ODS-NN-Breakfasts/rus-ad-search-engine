@@ -19,3 +19,6 @@ This is a main design document to document design principles, system architectur
 
 #### GloVe
 
+| Library                                                            | Licence  | Languages   | Models                                                                               | Model Licences | OOV | Comment                                    |
+|--------------------------------------------------------------------|----------|-------------|--------------------------------------------------------------------------------------|----------------|-----|--------------------------------------------|
+| [SpaCy](https://spacy.io/usage/models#quickstart) | MIT | rus<br/>eng | "ru_core_news_sm" <br/> "ru_core_news_md"  <br/> "ru_core_news_lg"                             | MIT | in md / lg models have vector vocabulary support  | Tokenization, <br/> POS Tagging, <br/>  Lemmatization, <br/> Named Entity Recognition, <br/>   Similarity                 |
