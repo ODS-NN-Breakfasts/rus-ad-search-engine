@@ -14,5 +14,6 @@ All operations for project development and maintenance should be described on [W
 ├── .dvcignore - auxiliary file for DVC
 ├── .gitignore - important ignore settings (also needed for DVC)
 ├── README.md - this document
-└── data.dvc - DVC info on tracked content of "data/" directory (managed automatically)
+├── data.dvc - DVC info on tracked content of "data/" directory (managed automatically)
+└── requirements.txt - list of Python packages for installation
 ```
