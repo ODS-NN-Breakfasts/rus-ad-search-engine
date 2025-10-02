@@ -29,6 +29,9 @@ There is a set of advertisements in Russian (and partially English) language, wh
 | [flair](https://flairnlp.github.io/docs/intro)                     | MIT      | rus<br/>eng | [ruwikiruscorpora_upos_cbow_300_10_2021](https://rusvectores.org/ru/models/)  <br/> ? | CC-BY <br/>  ? | no  | only text format, <br/> tokenizes POS-tags | 
 
 #### FastText
+| Library                                              | Licence  | Languages   | Models                                   | Model Licences | OOV | Comment                                                                                                             |
+|------------------------------------------------------|----------|-------------|------------------------------------------|--------------|-----|---------------------------------------------------------------------------------------------------------------------|
+| [FastText](https://fasttext.cc/docs/en/support.html) | MIT | rus<br/>eng | "ru" <br/> "en"| CC BY-SA 3.0            | Yes | Subword tokenization, <br/> Sentence vectorization |
 
 #### GloVe
 
