@@ -37,7 +37,7 @@ There is a set of advertisements in Russian (and partially English) language, wh
 
 | Library                                                            | Licence  | Languages   | Models                                                                               | Model Licences | OOV | Comment                                    |
 |--------------------------------------------------------------------|----------|-------------|--------------------------------------------------------------------------------------|----------------|-----|--------------------------------------------|
-| [SpaCy](https://spacy.io/usage/models#quickstart) | MIT | rus<br/>eng | "ru_core_news_sm" <br/> "ru_core_news_md"  <br/> "ru_core_news_lg"                             | MIT | in md / lg models have vector vocabulary support  | Tokenization, <br/> POS Tagging, <br/>  Lemmatization, <br/> Named Entity Recognition, <br/>   Similarity                 |
+| [SpaCy](https://spacy.io/usage/models#quickstart) | MIT | rus<br/>eng | "ru_core_news_sm" <br/> "ru_core_news_md"  <br/> "ru_core_news_lg"                             | MIT | md / lg models have vector vocabulary support (see first important note [here](https://spacy.io/usage/linguistic-features#vectors-similarity)) | Tokenization, <br/> POS Tagging, <br/>  Lemmatization, <br/> Named Entity Recognition, <br/>   Similarity                 |
 
 ## Data Format
 
@@ -46,8 +46,9 @@ There is a set of advertisements in Russian (and partially English) language, wh
 * `request_db.txt` - plain text file with one search request per line
    * ID of request is its line number (counted from 1), so to keep old IDs, new requests must be added below
 * `matching_db.txt` - matching file for requests and advertisements:
-   * Each line contains matching info in a form like `1, 2, 4, 10 - 4, 10, 11, 18, 20`, where _before the dash_ comma-separated request IDs are placed, and comma-separated advertisement IDs are placed _after the dash_
-   * Comma-separated IDs is just a syntactic sugar, they can be equivalently written as `1 - 4`, `2 - 4`, `4 - 4`, `10 - 4`, `1 - 10`, and so on
+   * Each line contains matching info in a form like `1, 2, 4-7, 10 <=> 4, 10, 11, 18-20`, where a list of _request IDs_ is placed _before_ `<=>` separator, and a list of _advertisement IDs_ is placed _after_ it
+   * Ranges of IDs can be written with `-` dash for short, both the start and the end are in cluded in the range: `18-20` equals to `18, 19, 20`
+   * Comma-separated IDs is just a syntactic sugar, they can be equivalently written as `1 <=> 4`, `2 <=> 4`, `4 <=> 4`, `5 <=> 4`, `6 <=> 4`, `7 <=> 4`, `10 <=> 4`, `1 <=> 10`, and so on
    * IDs that were not mentioned in the matching file accounted as not matched
 
 No suitable data annotators were found after the quick search, so data is annotated manually in plain text file.
@@ -85,6 +86,10 @@ graph LR
 ```
 
 ## Architecture Decisions
+
+### Python
+
+Project is developed on Python 3.12
 
 ### No Data in Repository
 
