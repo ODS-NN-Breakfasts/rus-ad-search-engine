@@ -58,6 +58,8 @@ To be organized into tables
 
 ## Data Format
 
+All data is located in `data/` directory and [is tracked separately](#no-data-in-repository).
+
 * `ads_db.txt` - plain text file with one advertisement per line (multiline advertisements are normalized to a single line with `\n`)
    * ID of advertisement is its line number (counted from 1), so to keep old IDs, new requests must be added below
 * `request_db.txt` - plain text file with one search request per line
@@ -68,7 +70,24 @@ To be organized into tables
    * Comma-separated IDs is just a syntactic sugar, they can be equivalently written as `1 <=> 4`, `2 <=> 4`, `4 <=> 4`, `5 <=> 4`, `6 <=> 4`, `7 <=> 4`, `10 <=> 4`, `1 <=> 10`, and so on
    * IDs that were not mentioned in the matching file accounted as not matched
 
-No suitable data annotators were found after the quick search, so data is annotated manually in plain text file.
+### Annotation Rules
+
+No suitable data annotators were found after the quick search, so data is annotated manually in a plain text file.
+
+To speed-up annotation, it can be useful to categorize requests in `request_db.txt` to categories (we stored them in `request_categories.txt` in the format `<category name>: request IDs`), then find these categoried in `ads_db.txt`. The markup process can be started from matching these categories, then matches for each category can be finally checked according to the rules below.
+
+General matching rules:
+
+1. All missed information (in request or in advertisement) is interpreted in favor of _match_
+   1. "bed" matches "iron bed", "wooden bed", "a set of bed, mattress, and two chairs", etc.
+1. If the "direction of action" differs (sell vs buy, take vs give), then there is _no match_
+1. If the difference is only in price (but "direction of action" coincides), then it is _match_
+   1. "I will accept a bed as a gift" matches "bed for $1M", "old bed for a chocolate", "I'm giving a bed away for free", etc.
+1. Any difference in locations is _not a match_
+   1. "looking for bed in NY" does not match "beds in LA for free"
+1. Even clear difference in the product properties is still _a match_, as far as the main product _matches_ (_EXCLUSION:_ clothes size may be not _a match_)
+   1. "wooden bed" matches "iron bed", "red shirt" matches "blue shirt", etc.
+   1. "shoes of size 44" should not match "shoes of size 32", and also "children's clothes" should not match "plus size clothes", "clothes 6XL", etc.
 
 ## Tried Architectures
 
