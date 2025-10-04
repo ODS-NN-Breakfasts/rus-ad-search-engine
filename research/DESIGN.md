@@ -85,7 +85,7 @@ General matching rules:
    1. "I will accept a bed as a gift" matches "bed for $1M", "old bed for a chocolate", "I'm giving a bed away for free", etc.
 1. Any difference in locations is _not a match_
    1. "looking for bed in NY" does not match "beds in LA for free"
-1. Even clear difference in the product properties is still _a match_, as far as the main product _matches_ (_EXCLUSION:_ clothes size may be not _a match_)
+1. Even clear difference in the product properties is still _a match_, as far as the main product _matches_ (_EXCLUSION:_ clothes size may be _not a match_)
    1. "wooden bed" matches "iron bed", "red shirt" matches "blue shirt", etc.
    1. "shoes of size 44" should not match "shoes of size 32", and also "children's clothes" should not match "plus size clothes", "clothes 6XL", etc.
 
@@ -100,8 +100,8 @@ graph LR
   classDef outputData fill:#f6cef5
 
   ad[/Advertisement/]:::inputData
-  sent_processor1[Averaged word embedding with bag of words]
-  sent_processor2[Averaged word embedding with bag of words]
+  sent_processor1[Averaged word embedding over bag of words]
+  sent_processor2[Averaged word embedding over bag of words]
   ad_emb[Embedding of advertisement]:::intermediateData
   req[/User request/]:::inputData
   req_emb[Embedding of user request]:::intermediateData
