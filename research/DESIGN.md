@@ -19,6 +19,19 @@ There is a set of advertisements in Russian (and partially English) language, wh
 
 ### Text Preprocessing
 
+To be organized into tables
+
+[flair](https://flairnlp.github.io/docs/intro) has: 
+* POS-tagging (multilingual - check rus), 
+* NER (multilingual - check rus)
+* more
+
+[SpaCy](https://spacy.io/usage/models#quickstart) has:
+* Tokenization
+* POS Tagging
+* Lemmatization
+* Named Entity Recognition
+
 ### Word Embeddings
 
 #### Word2Vec
@@ -36,9 +49,9 @@ There is a set of advertisements in Russian (and partially English) language, wh
 
 #### GloVe
 
-| Library                                                            | Licence  | Languages   | Models                                                                                      | Model Licences | OOV | Comment                                                                                                    |
-|--------------------------------------------------------------------|----------|-------------|---------------------------------------------------------------------------------------------|----------------|-----|------------------------------------------------------------------------------------------------------------|
-| [SpaCy](https://spacy.io/usage/models#quickstart) | MIT | rus<br/>eng | "ru_core_news_md"  <br/> "ru_core_news_lg" <br/> "en_core_news_md"  <br/> "en_core_news_lg" | MIT | No  | Only md / lg models have vector vocabulary support (see first important note [here](https://spacy.io/usage/linguistic-features#vectors-similarity))<br/> Tokenization, <br/> POS Tagging, <br/>  Lemmatization, <br/> Named Entity Recognition, <br/>   Similarity |
+| Library                                                            | Licence  | Languages   | Models                                                                                      | Model Licences | OOV | Comment                                                                                                                                                            |
+|--------------------------------------------------------------------|----------|-------------|---------------------------------------------------------------------------------------------|----------------|-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [SpaCy](https://spacy.io/usage/models#quickstart) | MIT | rus<br/>eng | "ru_core_news_md"  <br/> "ru_core_news_lg" <br/> "en_core_news_md"  <br/> "en_core_news_lg" | MIT | No  | Only "md" / "lg" models have vector vocabulary support (see first important note [here](https://spacy.io/usage/linguistic-features#vectors-similarity)<br/> Similarity |
 
 
 
