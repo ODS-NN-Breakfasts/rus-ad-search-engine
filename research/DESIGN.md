@@ -121,6 +121,48 @@ graph LR
   result_compare==>metric
 ```
 
+## Images Usage
+Since advertisements contain images of a product, it's reasonable to try to collect some extra info from them.
+
+### Cases
+In ideal advertisement should have all the info in the description (products, materials, colors, etc.). In reality some of advertisements provide all info only in image with no words about the product. Therefore we have 3 types of advertisements:
+1) Description says all the information about the product -> there is no additional (and useful) info in the image. It's the majority of the ads and most of them is selling (or giving) plants or food. **About 80% of ads**
+2) Description has some info, but it's not enough to fully descibe the product. It's the case with clothes and furniture. Image here can give information about materials, colors and condition of a product, that could be useful as addition for a product description. **About 5% of ads**
+3) Description says nothing about the product. Here images is the only source of info. **About 15% of ads**
+
+### Models
+So we have about 20% of advertisements where image info might be useful. Now let's see which models could be useful.
+
+#### YOLOv8/v11 pretrained on MS COCO (agpl-3.0)
+Advantages:
+- 55 of 80 classes could be possible advertisement product 
+- Even largest models are actually lightweight in terms of memory usage and inference speed
+- Could be easily finetuned in future
+
+Disadvantages:
+- Classes are too general (for example, car could be detected, but no brend)
+- Leak of the most common classes, such as clothes 
+
+#### CLIP (MIT Licence)
+Advantages:
+- Could be used for Zero-Shot classification
+- Visual encoder could be used without text encoder to make embedding of images, that could be added to request embeddings
+- Quite small size and fast inference (especially if only visual encoder used)
+
+Disadvantages:
+- Don't see any, atleast without testing 
+
+#### Quantized VLMs
+Advantages:
+- The best in terms of getting information from images
+- "Out of the box" usage, no need in futher finetuning
+
+Disadvantages:
+- Resource needs, even smallest of quantized VLMs weight around 1GB and may significantly increase the search time
+
+Some of VLMs:
+- **LLaMa3.2**: ~1.03GB for 4bit quantization
+
 ## Architecture Decisions
 
 ### Python
