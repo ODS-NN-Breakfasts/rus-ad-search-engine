@@ -32,6 +32,14 @@ To be organized into tables
 * Lemmatization
 * Named Entity Recognition
 
+#### Lemmatization
+| Library         | Licence   | Languages  | Models    | Model Licences | OOV     | Comment |
+| :--------------:|:---------:|:----------:|:---------:|:--------------:|:-------:|:-------:|
+|pymorphy2/3      |MIT        |rus         |OpenCorpora*|  -            |module makes suggestion for OOV|https://github.com/no-plagiarism/pymorphy3|
+|pymystem3        |MIT        |rus/eng     |  -        |  -             |module makes suggestion for OOV|https://github.com/nlpub/pymystem3|
+|SpaCy            |MIT        |rus/eng     | ru_core_news_md/ru_core_news_lg <br/> en_core_web_md/en_core_web_lg |- |No|https://spacy.io/|
+* -  https://opencorpora.org/
+
 ### Word Embeddings
 
 #### Word2Vec
