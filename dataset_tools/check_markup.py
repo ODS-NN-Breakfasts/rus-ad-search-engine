@@ -65,6 +65,7 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None
             f.write(result_text)
         print(f"\n✅ Result has been saved to: {save_to}")
 
+
 if __name__ == '__main__':
     data = load_matching_data("../data/matching_db.txt")
     show_request_and_adverts(requests_file="../data/request_db.txt",ads_file="../data/ads_db.txt",matching_dict = data, save_to="../data/result.txt")
