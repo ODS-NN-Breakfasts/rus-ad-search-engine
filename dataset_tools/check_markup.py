@@ -45,9 +45,7 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None
     all_adverts = set(range(1, len(ads) + 1))
 
     # get list of unmatched adverts
-
     unmatched_adverts = sorted(list(all_adverts - matched_adverts))
-
     output_lines.append("Unmatched adverts:")
 
     if unmatched_adverts:
@@ -67,5 +65,6 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None
             f.write(result_text)
         print(f"\n✅ Result has been saved to: {save_to}")
 
-#data = load_matching_data("../data/matching_db.txt")
-#show_request_and_adverts(requests_file="../data/request_db.txt",ads_file="../data/ads_db.txt",matching_dict = data, save_to="../data/result.txt")
+if __name__ == '__main__':
+    data = load_matching_data("../data/matching_db.txt")
+    show_request_and_adverts(requests_file="../data/request_db.txt",ads_file="../data/ads_db.txt",matching_dict = data, save_to="../data/result.txt")
