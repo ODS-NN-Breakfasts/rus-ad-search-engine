@@ -25,7 +25,7 @@ def load_matching_data(file_name):
                 else:
                     ad_ids.append(part)
 
-            # если id уже есть, добавим новые объявления
+            # add new ads, if id is present
             if query_id in all_data:
                 all_data[query_id].extend(ad_ids)
             else:
