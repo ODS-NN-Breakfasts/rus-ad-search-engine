@@ -4,9 +4,9 @@ from utils import load_matching_data
 def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None):
     """
     Displays all queries with their matching ads in the following format:
-    1. <query>
-       <advert 1>
-       <advert 2>
+    1. <request>
+       <advert 1 number> <advert 1 text>
+       <advert 2 number> <advert 2 text>
        ...
     At the end, prints unmatched ads.
     Optionally saves the result to a file.
@@ -32,25 +32,25 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None
         if request_id  in matching_dict:      # request in our matching dict
             for advert_id in matching_dict[request_id]:
                 advert_index = int(advert_id)
-                if 0 < advert_index < len(ads): 
-                    output_lines.append(f"   {ads[advert_index - 1]}")
+                if 0 < advert_index <= len(ads): 
+                    output_lines.append(f"{advert_index} {ads[advert_index - 1]}")
                     matched_adverts.add(advert_index)
                 else:
-                    output_lines.append(f"Advert [{advert_id}] not found in ads_db.txt")
+                    raise ValueError(f"Advert [{advert_id}] not found in ads_db.txt")
+
         else:
             output_lines.append("No matching adverts")
 
-        output_lines.append("")  # Blank line after each query block
-
-    all_adverts = set(range(1, len(ads) + 1))
+        output_lines.append("")  # Blank line after each request's block
 
     # get list of unmatched adverts
-    unmatched_adverts = sorted(list(all_adverts - matched_adverts))
+    unmatched_adverts = [id for id in range(1, len(ads) + 1) if id not in matched_adverts]
+
     output_lines.append("Unmatched adverts:")
 
     if unmatched_adverts:
         for advert_index in unmatched_adverts:
-            output_lines.append(f"   {ads[advert_index - 1]}")
+            output_lines.append(f"{advert_index} {ads[advert_index - 1]}")
     else:
         output_lines.append("All ads are matched")
 

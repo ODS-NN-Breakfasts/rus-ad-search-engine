@@ -14,21 +14,32 @@ def load_matching_data(file_name):
             if not line or "<=>" not in line:
                 continue
 
-            query_id, ads_part = map(str.strip, line.split("<=>"))
-            ad_ids = []
+            request_part, adverts_part = map(str.strip, line.split("<=>"))
+            adverts_ids = []
+            requests_ids = []
 
-            for part in ads_part.split(","):
+            # parse lists of requests and adverts
+            for part in request_part.split(","):
                 part = part.strip()
                 if "-" in part:  # the rang of numbers like 125-127
                     start, end = map(int, part.split("-"))
-                    ad_ids.extend([str(i) for i in range(start, end + 1)])
+                    requests_ids.extend([str(i) for i in range(start, end + 1)])
                 else:
-                    ad_ids.append(part)
+                    requests_ids.append(part)            
+
+            for part in adverts_part.split(","):
+                part = part.strip()
+                if "-" in part:  # the rang of numbers like 125-127
+                    start, end = map(int, part.split("-"))
+                    adverts_ids.extend([str(i) for i in range(start, end + 1)])
+                else:
+                    adverts_ids.append(part)
 
             # add new ads, if id is present
-            if query_id in all_data:
-                all_data[query_id].extend(ad_ids)
-            else:
-                all_data[query_id] = ad_ids
+            for request in requests_ids:
+                if request in all_data:
+                    all_data[request].extend(adverts_ids)
+                else:
+                    all_data[request] = adverts_ids
 
     return all_data
