@@ -1,7 +1,8 @@
 import os
 from utils import load_matching_data
 
-def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None):
+
+def show_request_and_adverts(requests_file, ads_file, matching_dict, save_to=None):
     """
     Displays all queries with their matching ads in the following format:
     1. <request>
@@ -29,28 +30,28 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None
         # add number of request and it's text
         output_lines.append(f"{i}. {request_text}")
 
-        if request_id  in matching_dict:      # request in our matching dict
+        if request_id  in matching_dict: # request in our matching dict
             for advert_id in matching_dict[request_id]:
                 advert_index = int(advert_id)
                 if 0 < advert_index <= len(ads): 
-                    output_lines.append(f"{advert_index} {ads[advert_index - 1]}")
+                    output_lines.append(f"\t{advert_index}) {ads[advert_index - 1]}")
                     matched_adverts.add(advert_index)
                 else:
                     raise ValueError(f"Advert [{advert_id}] not found in ads_db.txt")
 
         else:
-            output_lines.append("No matching adverts")
+            output_lines.append("\tNo matching adverts")
 
         output_lines.append("")  # Blank line after each request's block
 
     # get list of unmatched adverts
-    unmatched_adverts = [id for id in range(1, len(ads) + 1) if id not in matched_adverts]
+    unmatched_adverts = [idx for idx in range(1, len(ads) + 1) if idx not in matched_adverts]
 
     output_lines.append("Unmatched adverts:")
 
     if unmatched_adverts:
         for advert_index in unmatched_adverts:
-            output_lines.append(f"{advert_index} {ads[advert_index - 1]}")
+            output_lines.append(f"\t{advert_index}.\t{ads[advert_index - 1]}")
     else:
         output_lines.append("All ads are matched")
 
@@ -68,4 +69,5 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict,save_to=None
 
 if __name__ == '__main__':
     data = load_matching_data("../data/matching_db.txt")
-    show_request_and_adverts(requests_file="../data/request_db.txt",ads_file="../data/ads_db.txt",matching_dict = data, save_to="../data/result.txt")
+    show_request_and_adverts(requests_file="../data/request_db.txt", ads_file="../data/ads_db.txt",
+                             matching_dict = data, save_to="../data/result_markup.txt")
