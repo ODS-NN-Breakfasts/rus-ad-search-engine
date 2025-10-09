@@ -51,7 +51,7 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict, save_to=Non
 
     if unmatched_adverts:
         for advert_index in unmatched_adverts:
-            output_lines.append(f"\t{advert_index}.\t{ads[advert_index - 1]}")
+            output_lines.append(f"\t{advert_index}) {ads[advert_index - 1]}")
     else:
         output_lines.append("All ads are matched")
 

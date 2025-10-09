@@ -2,7 +2,7 @@ def load_matching_data(file_name):
     """
     Upload the file with matching information and parse it.
     The file should contain information in the following format:
-        357 <=> 122,123,126-127,172
+        357 <=> 122, 123, 126-127, 172
     Output - dictionary in the following format:
         {"357": ["122", "123", "126", "127", "172"], ...}
     """
