@@ -141,7 +141,7 @@ In ideal advertisement should have all the info in the description (products, ma
 ### Models
 So we have about 20% of advertisements where image info might be useful. Now let's see which models could be useful.
 
-#### YOLOv8/v11 pretrained on MS COCO (agpl-3.0)
+#### YOLOv8/v11 pretrained on MS COCO
 Advantages:
 - 55 of 80 classes could be possible advertisement product 
 - Even largest models are actually lightweight in terms of memory usage and inference speed
@@ -149,9 +149,15 @@ Advantages:
 
 Disadvantages:
 - Classes are too general (for example, car could be detected, but no brend)
-- Leak of the most common classes, such as clothes 
+- Leak of the most common classes, such as clothes
 
-#### CLIP (MIT Licence)
+Links: 
+   [MS COCO Classes](https://docs.ultralytics.com/datasets/detect/coco/#dataset-yaml), 
+   [YOLOv8](https://huggingface.co/Ultralytics/YOLOv8), 
+   [YOLOv11](https://huggingface.co/Ultralytics/YOLO11),
+   [YOLO License](https://choosealicense.com/licenses/agpl-3.0/)
+
+#### CLIP
 Advantages:
 - Could be used for Zero-Shot classification
 - Visual encoder could be used without text encoder to make embedding of images, that could be added to request embeddings
@@ -159,6 +165,11 @@ Advantages:
 
 Disadvantages:
 - Don't see any, atleast without testing 
+
+Links:
+   [CLIP API](https://github.com/openai/CLIP),
+   [CLIP Visual Encoder](https://huggingface.co/openai/clip-vit-base-patch32) (there are more on HuggingFace),
+   [CLIP License](https://github.com/openai/CLIP/blob/main/LICENSE)
 
 #### Quantized VLMs
 Advantages:
@@ -169,7 +180,7 @@ Disadvantages:
 - Resource needs, even smallest of quantized VLMs weight around 1GB and may significantly increase the search time
 
 Some of VLMs:
-- **LLaMa3.2**: ~1.03GB for 4bit quantization
+- **[LLaMa3.2](https://huggingface.co/unsloth/Llama-3.2-1B-Instruct-unsloth-bnb-4bit)**: ~1.03GB for 4bit quantization, [License](https://huggingface.co/meta-llama/Llama-3.2-1B/blob/main/LICENSE.txt)
 
 ## Architecture Decisions
 
