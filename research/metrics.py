@@ -66,30 +66,25 @@ def calc_confusion_matrix(true_markup, pred_markup, n_ads, n_requests):
 def calc_all_stats(confusion_matrix):
     """
     Counts confusion matrix-based metrics from accuracy to F-score.
-    :param ndigits: number of digits after point
     :param confusion_matrix: dict of metrics from confusion_matrix fn
     :return: dic
     """
-    metrics = {"accuracy": 0,
-               "precision": 0,
-               "recall": 0,
-               "f1": 0
+    metrics = {"accuracy": 0.0,
+               "precision": 0.0,
+               "recall": 0.0,
+               "f1": 0.0
                }
 
-    accuracy = (confusion_matrix["TP"] + confusion_matrix["TN"]) / (confusion_matrix["TP"] +
+    metrics["accuracy"] = (confusion_matrix["TP"] + confusion_matrix["TN"]) / (confusion_matrix["TP"] +
                                                                     confusion_matrix["FP"] +
                                                                     confusion_matrix["TN"] +
                                                                     confusion_matrix["FN"]
                                                                     )
     if confusion_matrix["TP"] + confusion_matrix["FP"]:
-        precision = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FP"])
+        metrics["precision"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FP"])
     if confusion_matrix["TP"] + confusion_matrix["FN"]:
-        recall = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FN"])
-    if precision + recall:
-        f1 = 2 * (precision * recall) / (precision + recall)
+        metrics["recall"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FN"])
+    if metrics["precision"] + metrics["recall"] :
+        metrics["f1"] = 2 * (metrics["precision"] * metrics["recall"]) / (metrics["precision"] + metrics["recall"] )
 
-    metrics["accuracy"] = accuracy
-    metrics["precision"] = precision
-    metrics["recall"] = recall
-    metrics["f1"] = f1
     return metrics
