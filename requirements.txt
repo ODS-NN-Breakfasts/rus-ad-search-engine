@@ -1,2 +1,7 @@
-dvc[ssh]
+# search engine
 spacy
+
+# infrastructure
+dvc[ssh]
+matplotlib
+pandas
