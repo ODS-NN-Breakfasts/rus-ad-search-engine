@@ -33,13 +33,14 @@ jobs:
           cd public_site_sources
           bash get_metric_history.sh
           python image_generator.py
+          cd ..
           echo "History pictures were generated"
 
       - name: Upload site static files
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: $GITHUB_WORKSPACE/public_site_sources/
+          path: public_site_sources/
 
   deploy:
     environment:
