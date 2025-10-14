@@ -3,5 +3,6 @@ spacy
 
 # infrastructure
 dvc[ssh]
-matplotlib
-pandas
+
+# packages for GitHub Page build
+-r gh_pages/py_reqs.txt

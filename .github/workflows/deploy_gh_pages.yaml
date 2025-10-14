@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: CI_metrics_history
 
 # https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow
@@ -17,7 +15,6 @@ jobs:
     # https://github.com/actions/runner-images
     runs-on: ubuntu-24.04
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
@@ -28,11 +25,12 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Generate site sources
         run: |
-          cd $GITHUB_WORKSPACE
-          pip install -r requirements.txt
-          cd public_site_sources
+          cd $GITHUB_WORKSPACE/gh_pages
+          pip install -r py_reqs.txt
           bash get_metric_history.sh
+          cat metrics.csv
           python image_generator.py
+          rm get_metric_history.sh image_generator.py README.md
           cd ..
           echo "History pictures were generated"
 
@@ -40,7 +38,7 @@ jobs:
         id: deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: public_site_sources/
+          path: gh_pages/
 
   deploy:
     environment:
