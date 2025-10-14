@@ -28,7 +28,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Generate site sources
         run: |
-          cd $GITHUB_WORKSPACE/public_site_sources
+          cd $GITHUB_WORKSPACE
+          pip install -r requirements.txt
+          cd public_site_sources
           bash get_metric_history.sh
           python image_generator.py
           echo "History pictures were generated"
