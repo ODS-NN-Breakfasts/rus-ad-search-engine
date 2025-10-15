@@ -2,7 +2,7 @@ import hashlib
 import json
 
 from dataset_tools import utils
-from search_pipeline import full_pipeline
+from search_pipeline import searcher
 from research import metrics
 
 
@@ -20,13 +20,13 @@ def calc_dataset_metrics():
         ads = f.readlines()
     true_markup = utils.load_matching_data(MARKUP_PATH)
 
-    enc_requests = full_pipeline.encode_strings(requests)
-    enc_ads = full_pipeline.encode_strings(ads)
+    enc_requests = searcher.encode_strings(requests)
+    enc_ads = searcher.encode_strings(ads)
 
     pred_markup = {}
     for req_id, enc_req in enumerate(enc_requests, start=1):
         print(f"Request {req_id} out of {len(requests)}")
-        pred_ad_idx_list = full_pipeline.search(enc_req, enc_ads)
+        pred_ad_idx_list = searcher.search(enc_req, enc_ads)
         # full_pipeline.search() returns 0-based list indices (the list contains all lines from input file),
         # but advertisement id is 1-based line number
         pred_markup[str(req_id)] = [str(idx + 1) for idx in pred_ad_idx_list]

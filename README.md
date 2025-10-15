@@ -21,6 +21,8 @@ All operations for project development and maintenance are described on [Wiki pa
 ├── .gitignore - important ignore settings (also needed for DVC)
 ├── README.md - this document
 ├── data.dvc - DVC info on tracked content of "data/" directory (managed automatically)
-├── metrics.json - search metrics, which are used to track history and generate the report on GitHub Pages
+├── metrics_generator.py - script to generate "metrics.json" file on all available data
+├── metrics.json - search metrics, which are used to track history and generate the report
+│   on GitHub Pages
 └── requirements.txt - list of Python packages for installation
 ```
