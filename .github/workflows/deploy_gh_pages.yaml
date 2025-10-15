@@ -4,8 +4,12 @@ name: CI_metrics_history
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - "metrics.json"
   pull_request:
     branches: [ "main" ]
+    paths:
+      - "metrics.json"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
