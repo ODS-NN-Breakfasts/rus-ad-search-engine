@@ -1,5 +1,5 @@
 import os
-from utils import load_matching_data
+from dataset_utils import load_matching_data
 
 
 def show_request_and_adverts(requests_file, ads_file, matching_dict, save_to=None):

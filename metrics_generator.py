@@ -1,9 +1,9 @@
 import hashlib
 import json
 
-from dataset_tools import utils
+from utils import dataset_utils
+from utils import metrics
 from search_pipeline import searcher
-from research import metrics
 
 
 REQUEST_DB_PATH = "data/request_db.txt"
@@ -18,7 +18,7 @@ def calc_dataset_metrics():
         requests = f.readlines()
     with open(AD_DB_PATH, "r", encoding="utf-8") as f:
         ads = f.readlines()
-    true_markup = utils.load_matching_data(MARKUP_PATH)
+    true_markup = dataset_utils.load_matching_data(MARKUP_PATH)
 
     enc_requests = searcher.encode_strings(requests)
     enc_ads = searcher.encode_strings(ads)

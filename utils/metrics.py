@@ -1,7 +1,7 @@
 def calc_confusion_matrix(true_markup, pred_markup, n_ads, n_requests):
     """
     Counts True Positive, False Positive, True Negative, False Negative metrics.
-    :param true_markup: result of dataset_tools.utils.load_matching_data
+    :param true_markup: result of dataset_utils.load_matching_data
     :param pred_markup: in the same format as true_markup
     :param n_ads: amount of ads in ads_db.txt
     :param n_requests: amount of requests in requests_db.txt
