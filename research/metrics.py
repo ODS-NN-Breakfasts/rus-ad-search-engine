@@ -80,19 +80,20 @@ def calc_all_stats(confusion_matrix):
     :return: dict of metrics
     """
     metrics = {}
+    TP = confusion_matrix["TP"]
+    FP = confusion_matrix["FP"]
+    TN = confusion_matrix["TN"]
+    FN = confusion_matrix["FN"]
 
-    metrics["accuracy"] = (confusion_matrix["TP"] + confusion_matrix["TN"]) / (
-        confusion_matrix["TP"] + confusion_matrix["FP"] + confusion_matrix["TN"] +
-        confusion_matrix["FN"]
-    )
+    metrics["accuracy"] = (TP + TN) / (TP + FP + TN + FN)
 
-    if confusion_matrix["TP"] + confusion_matrix["FP"]:
-        metrics["precision"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FP"])
+    if TP + FP:
+        metrics["precision"] = TP / (TP + FP)
     else:
         metrics["precision"] = 0
 
-    if confusion_matrix["TP"] + confusion_matrix["FN"]:
-        metrics["recall"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FN"])
+    if TP + FN:
+        metrics["recall"] = TP / (TP + FN)
     else:
         metrics["recall"] = 0
 
