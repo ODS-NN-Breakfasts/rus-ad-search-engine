@@ -77,7 +77,7 @@ def calc_all_stats(confusion_matrix):
     """
     Counts confusion matrix-based metrics from accuracy to F-score.
     :param confusion_matrix: dict of metrics from confusion_matrix fn
-    :return: dic
+    :return: dict of metrics
     """
     metrics = {"accuracy": 0.0,
                "precision": 0.0,
