@@ -76,27 +76,26 @@ def calc_confusion_matrix(true_markup, pred_markup, n_ads, n_requests):
 def calc_all_stats(confusion_matrix):
     """
     Counts confusion matrix-based metrics from accuracy to F-score.
-    :param confusion_matrix: dict of metrics from confusion_matrix fn
+    :param confusion_matrix: dict of metrics from calc_confusion_matrix fn
     :return: dict of metrics
     """
-    metrics = {"accuracy": 0.0,
-               "precision": 0.0,
-               "recall": 0.0,
-               "f1": 0.0
-               }
+    metrics = {}
 
     metrics["accuracy"] = (confusion_matrix["TP"] + confusion_matrix["TN"]) / (
         confusion_matrix["TP"] + confusion_matrix["FP"] + confusion_matrix["TN"] +
         confusion_matrix["FN"]
     )
+
     if confusion_matrix["TP"] + confusion_matrix["FP"]:
         metrics["precision"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FP"])
     else:
         metrics["precision"] = 0
+
     if confusion_matrix["TP"] + confusion_matrix["FN"]:
         metrics["recall"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FN"])
     else:
         metrics["recall"] = 0
+
     if metrics["precision"] + metrics["recall"]:
         metrics["f1"] = 2 * (metrics["precision"] * metrics["recall"]) / (metrics["precision"] + metrics["recall"])
     else:
