@@ -1,6 +1,8 @@
 import hashlib
 import json
 
+import numpy as np
+
 from utils import dataset_utils
 from utils import metrics
 from search_pipeline import searcher
@@ -20,20 +22,40 @@ def calc_dataset_metrics():
         ads = f.readlines()
     true_markup = dataset_utils.load_matching_data(MARKUP_PATH)
 
+    print("Encoding requests...")
     enc_requests = searcher.encode_strings(requests)
+    assert len(enc_requests) == len(requests)
+    print("Encoding advertisements...")
     enc_ads = searcher.encode_strings(ads)
+    assert len(enc_ads) == len(ads)
 
+    print("Calculating match probabilities...")
+    matching_probs = []
+    for req_id, enc_req in enumerate(enc_requests, start=1):
+        matching_probs.append(searcher.get_probs(enc_req, enc_ads))
+    matching_probs = np.asarray(matching_probs)
+    assert np.max(matching_probs) <= 1
+    assert np.min(matching_probs) >= 0
+
+    print("Calculating optimal threshold...")
+    opt_threshold = metrics.calc_optimal_threshold(matching_probs, true_markup, len(requests), len(ads))
+    direct_markup = metrics.convert_probs_to_markup(matching_probs, opt_threshold, len(requests), len(ads))
+
+    print("Searching with optimal threshold...")
     pred_markup = {}
     for req_id, enc_req in enumerate(enc_requests, start=1):
-        print(f"Request {req_id} out of {len(requests)}")
-        pred_ad_idx_list = searcher.search(enc_req, enc_ads)
-        # full_pipeline.search() returns 0-based list indices (the list contains all lines from input file),
-        # but advertisement id is 1-based line number
-        pred_markup[str(req_id)] = [str(idx + 1) for idx in pred_ad_idx_list]
+        pred_ad_idx_list = searcher.search(enc_req, enc_ads, opt_threshold)
+        if len(pred_ad_idx_list) > 0:
+            # searcher.search() returns 0-based list indices (the list contains all lines from input file),
+            # but advertisement id is 1-based line number
+            pred_markup[str(req_id)] = [str(idx + 1) for idx in pred_ad_idx_list]
+    assert pred_markup == direct_markup
 
+    print("Calculating and saving stats...")
     confusion_matrix = metrics.calc_confusion_matrix(true_markup, pred_markup, n_ads=len(ads), n_requests=len(requests))
     all_stats = metrics.calc_all_stats(confusion_matrix)
     all_stats["conf_matr"] = confusion_matrix
+    all_stats["threshold"] = opt_threshold
 
     with open(REQUEST_DB_PATH, "rb") as f:
         req_db_hash_str = hashlib.md5(f.read()).hexdigest()

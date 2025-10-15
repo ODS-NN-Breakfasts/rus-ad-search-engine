@@ -192,7 +192,13 @@ Project is developed on Python 3.12
 
 Since real advertisements can contain personal information, we don't store them in the repository. Generally, we decided to not store any data in the repository at all, and work with it locally with [DVC](https://dvc.org/).
 
-### Metrics Monitoring
+### Metrics
+
+#### Optimal Threshold
+
+Since the development workflow needs constant comparison between current metrics and the previously obtained ones, we decided to calculate metrics with best possible threshold. The best (most optimal) threshold is [calculated automatically](utils/metrics.py) by maximization of F1 for the whole dataset, and after that it is used to calculate all threshold-based metrics. In our opinion, which should work better than ROC-AUC (which averages performance by _multiple_ thresholds, so two different models with the _fixed_ threshold can differ in opposite direction) or a static fixed threshold (which can be not the best one for each model).
+
+#### Monitoring
 
 Monitoring system was implemented through the [metrics.json](metrics.json) file, which contains search metrics. Its history is obtained from Git and visualised on GitHub Pages. More details are in the [corresponding README](gh_pages/README.md).
 

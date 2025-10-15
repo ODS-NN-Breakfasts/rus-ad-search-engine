@@ -3,6 +3,7 @@ spacy
 
 # infrastructure
 dvc[ssh]
+scikit-learn
 
 # packages for GitHub Page build
 -r gh_pages/py_reqs.txt
