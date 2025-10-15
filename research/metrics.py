@@ -9,6 +9,16 @@ def calc_confusion_matrix(true_markup, pred_markup, n_ads, n_requests):
     """
     assert len(true_markup) <= n_requests
     assert max(len(ads) for ads in true_markup) <= n_ads
+    assert all(isinstance(k, str) and all(isinstance(vv, str) for vv in v) for k, v in true_markup.items())
+    assert all(
+        int(k) > 0 and int(k) <= n_requests and all(int(vv) > 0 and int(vv) <= n_ads for vv in v)
+        for k, v in true_markup.items()
+    )
+    assert all(isinstance(k, str) and all(isinstance(vv, str) for vv in v) for k, v in pred_markup.items())
+    assert all(
+        int(k) > 0 and int(k) <= n_requests and all(int(vv) > 0 and int(vv) <= n_ads for vv in v)
+        for k, v in pred_markup.items()
+    )
 
     metrics = {"TP": 0,
                "FP": 0,
@@ -75,16 +85,21 @@ def calc_all_stats(confusion_matrix):
                "f1": 0.0
                }
 
-    metrics["accuracy"] = (confusion_matrix["TP"] + confusion_matrix["TN"]) / (confusion_matrix["TP"] +
-                                                                    confusion_matrix["FP"] +
-                                                                    confusion_matrix["TN"] +
-                                                                    confusion_matrix["FN"]
-                                                                    )
+    metrics["accuracy"] = (confusion_matrix["TP"] + confusion_matrix["TN"]) / (
+        confusion_matrix["TP"] + confusion_matrix["FP"] + confusion_matrix["TN"] +
+        confusion_matrix["FN"]
+    )
     if confusion_matrix["TP"] + confusion_matrix["FP"]:
         metrics["precision"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FP"])
+    else:
+        metrics["precision"] = 0
     if confusion_matrix["TP"] + confusion_matrix["FN"]:
         metrics["recall"] = confusion_matrix["TP"] / (confusion_matrix["TP"] + confusion_matrix["FN"])
-    if metrics["precision"] + metrics["recall"] :
-        metrics["f1"] = 2 * (metrics["precision"] * metrics["recall"]) / (metrics["precision"] + metrics["recall"] )
+    else:
+        metrics["recall"] = 0
+    if metrics["precision"] + metrics["recall"]:
+        metrics["f1"] = 2 * (metrics["precision"] * metrics["recall"]) / (metrics["precision"] + metrics["recall"])
+    else:
+        metrics["f1"] = 0
 
     return metrics
