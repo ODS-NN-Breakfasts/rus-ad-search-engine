@@ -10,6 +10,8 @@ METRICS_PATH = pathlib.Path(__file__).resolve().parent / '..' / 'metrics.json'
 
 def calc_optimal_threshold(probs, true_markup, n_requests, n_ads):
     assert isinstance(probs, np.ndarray) and probs.shape == (n_requests, n_ads)
+    assert np.max(probs) <= 1
+    assert np.min(probs) >= 0
 
     true_probs = []
     for request_id in range(1, n_requests + 1):
@@ -54,6 +56,8 @@ def calc_optimal_threshold(probs, true_markup, n_requests, n_ads):
 
 def convert_probs_to_markup(probs, threshold, n_requests, n_ads):
     assert isinstance(probs, np.ndarray) and probs.shape == (n_requests, n_ads)
+    assert np.max(probs) <= 1
+    assert np.min(probs) >= 0
 
     markup = {}
     for request_id in range(1, n_requests + 1):
