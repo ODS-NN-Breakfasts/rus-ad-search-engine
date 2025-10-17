@@ -1,5 +1,11 @@
+import json
+import pathlib
+
 import numpy as np
 import sklearn
+
+
+METRICS_PATH = pathlib.Path(__file__).resolve().parent / '..' / 'metrics.json'
 
 
 def calc_optimal_threshold(probs, true_markup, n_requests, n_ads):
@@ -169,3 +175,105 @@ def calc_all_stats(confusion_matrix):
         metrics["f1"] = 0
 
     return metrics
+
+
+def compare_with_saved_stats(new_stats, new_confusion_matrix):
+
+    def format_int(val):
+        if not isinstance(val, str):
+            val = str(val)
+        return val
+
+    def format_float(val):
+        if not isinstance(val, str):
+            val = f"{val:0.3f}"
+        return val
+
+    def format_int_diff(old, new):
+        if not isinstance(old, str) and not isinstance(new, str):
+            diff = new - old
+            if diff > 0:
+                diff = f"📈 {diff}"
+            elif diff < 0:
+                diff = f"📉 {diff}"
+            else:
+                diff = f"↔️  {diff}"
+        else:
+            diff = "n/a"
+        return diff
+
+    def format_float_diff(old, new):
+        if not isinstance(old, str) and not isinstance(new, str):
+            diff = new - old
+            if diff > 0:
+                diff = f"📈 {diff:0.3f}"
+            elif diff < 0:
+                diff = f"📉 {diff:0.3f}"
+            else:
+                diff = f"↔️  {diff:0.3f}"
+        else:
+            diff = "n/a"
+        return diff
+
+    F1_MIN_DIFF = 0.05
+
+    with open(METRICS_PATH, "r", encoding="utf-8") as f:
+        old_stats = json.load(f)
+
+    old_tp = old_stats["conf_matr"].get("TP", "n/a")
+    old_fp = old_stats["conf_matr"].get("FP", "n/a")
+    old_tn = old_stats["conf_matr"].get("TN", "n/a")
+    old_fn = old_stats["conf_matr"].get("FN", "n/a")
+    old_precision = old_stats.get("precision", "n/a")
+    old_recall = old_stats.get("recall", "n/a")
+    old_f1 = old_stats.get("f1", "n/a")
+
+    new_tp = new_confusion_matrix.get("TP", "n/a")
+    new_fp = new_confusion_matrix.get("FP", "n/a")
+    new_tn = new_confusion_matrix.get("TN", "n/a")
+    new_fn = new_confusion_matrix.get("FN", "n/a")
+    new_precision = new_stats.get("precision", "n/a")
+    new_recall = new_stats.get("recall", "n/a")
+    new_f1 = new_stats.get("f1", "n/a")
+
+    print("-----------------------------------------------------------------------------------------")
+    print("|\tMetric\t\t|\tOld Value\t|\tNew Value\t|\tDiff\t|")
+    print("-----------------------------------------------------------------------------------------")
+    print(f"|\tTP\t\t|\t{format_int(old_tp)}\t\t|\t{format_int(new_tp)}\t\t|\t{format_int_diff(old_tp, new_tp)}\t|")
+    print(f"|\tFP\t\t|\t{format_int(old_fp)}\t\t|\t{format_int(new_fp)}\t\t|\t{format_int_diff(old_fp, new_fp)}\t|")
+    print(f"|\tTN\t\t|\t{format_int(old_tn)}\t\t|\t{format_int(new_tn)}\t\t|\t{format_int_diff(old_tn, new_tn)}\t|")
+    print(f"|\tFN\t\t|\t{format_int(old_fn)}\t\t|\t{format_int(new_fn)}\t\t|\t{format_int_diff(old_fn, new_fn)}\t|")
+    print(
+        f"|\tPrec\t\t|\t{format_float(old_precision)}\t\t|\t{format_float(new_precision)}\t\t|"
+        f"\t{format_float_diff(old_precision, new_precision)}\t|"
+    )
+    print(
+        f"|\tRecall\t\t|\t{format_float(old_recall)}\t\t|\t{format_float(new_recall)}\t\t|"
+        f"\t{format_float_diff(old_recall, new_recall)}\t|"
+    )
+    print(
+        f"|\tF1\t\t|\t{format_float(old_f1)}\t\t|\t{format_float(new_f1)}\t\t|"
+        f"\t{format_float_diff(old_f1, new_f1)}\t|"
+    )
+
+    if not isinstance(old_f1, str) and not isinstance(new_f1, str):
+        print()
+        if new_f1 > old_f1:
+            print(
+                f"F1 📈 increased by {new_f1 - old_f1:0.3f}, up to {100*new_f1:0.1f}%, " +
+                (
+                    "which is within the margin of error." if new_f1 - old_f1 < F1_MIN_DIFF
+                    else "which is a significant growth 🚀"
+                )
+            )
+        elif new_f1 < old_f1:
+            print(
+                f"F1 📉 decreased by {old_f1 - new_f1:0.3f}, down to {100*new_f1:0.1f}%, " +
+                (
+                    "which is within the margin of error." if old_f1 - new_f1 < F1_MIN_DIFF
+                    else "which is a significant fall."
+                )
+            )
+        else:
+            print("F1 didn't change")
+
