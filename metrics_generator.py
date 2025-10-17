@@ -51,12 +51,15 @@ def calc_dataset_metrics():
             pred_markup[str(req_id)] = [str(idx + 1) for idx in pred_ad_idx_list]
     assert pred_markup == direct_markup
 
-    print("Calculating and saving stats...")
+    print("Calculating stats...")
     confusion_matrix = metrics.calc_confusion_matrix(true_markup, pred_markup, n_ads=len(ads), n_requests=len(requests))
     all_stats = metrics.calc_all_stats(confusion_matrix)
     all_stats["conf_matr"] = confusion_matrix
     all_stats["threshold"] = opt_threshold
 
+    metrics.compare_with_saved_stats(all_stats, confusion_matrix)
+
+    print(f"Saving new stats to {METRICS_PATH}...")
     with open(REQUEST_DB_PATH, "rb") as f:
         req_db_hash_str = hashlib.md5(f.read()).hexdigest()
     with open(AD_DB_PATH, "rb") as f:
