@@ -43,3 +43,20 @@ def load_matching_data(file_name):
                     all_data[request] = adverts_ids
 
     return all_data
+
+
+#def sort_ads(ads_db_file):
+#    """
+#    Sort advert_ids for convenience and rewrite advert db (without contractions!).
+#    """
+#    data = load_matching_data(ads_db_file)
+#    data_sorted = {}
+#    for request_id in data:
+#        ads = [int(ad_id) for ad_id in data[request_id]]
+#        data_sorted[request_id] = sorted(ads)
+#
+#    with open(ads_db_file, "w", encoding="utf-8") as f:
+#        for request_id in data_sorted:
+#            ads = [str(ad_id) for ad_id in data_sorted[request_id]]
+#            line = f"{request_id} <=> {", ".join(ads)}\n"
+#            f.write(line)
