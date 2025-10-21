@@ -12,7 +12,7 @@ DEFAULT_PROB_THR = 0.5
 def _preprocess(text: str) -> str:
     text = text.replace("\\n", "\n").replace("\n", " ")
     text = text.strip()
-    text = text.lower()  # many words has vectors only in lowercase
+    text = text.lower()  # many words have vectors only in lowercase
     return text
 
 
