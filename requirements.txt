@@ -1,6 +1,9 @@
 # search engine
 spacy
 
+# images
+opencv-python
+
 # infrastructure
 dvc[ssh]
 scikit-learn
