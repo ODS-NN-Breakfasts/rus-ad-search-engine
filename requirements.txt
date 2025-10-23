@@ -9,6 +9,7 @@ notebook
 # research (investigations)
 plotly
 nltk
+pymorphy3
 
 # images
 opencv-python
