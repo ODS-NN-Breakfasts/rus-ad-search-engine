@@ -6,5 +6,12 @@ dvc[ssh]
 scikit-learn
 notebook
 
+# research (investigations)
+plotly
+nltk
+
+# images
+opencv-python
+
 # packages for GitHub Page build
 -r gh_pages/py_reqs.txt

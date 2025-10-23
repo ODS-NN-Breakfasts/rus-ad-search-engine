@@ -6,3 +6,7 @@ __pycache__/
 .ipynb_checkpoints/
 /data
 .idea/
+
+.vscode/
+research/yolov4
+research/results
