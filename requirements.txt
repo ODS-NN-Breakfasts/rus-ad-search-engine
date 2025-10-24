@@ -5,11 +5,15 @@ spacy
 dvc[ssh]
 scikit-learn
 notebook
+ipywidgets
 
 # research (investigations)
 plotly
 nltk
 pymorphy3
+torch --index-url https://download.pytorch.org/whl/cpu
+transformers
+sentence_transformers
 
 # images
 opencv-python
