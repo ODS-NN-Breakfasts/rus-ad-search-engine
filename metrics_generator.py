@@ -49,7 +49,8 @@ def calc_dataset_metrics():
             # searcher.search() returns 0-based list indices (the list contains all lines from input file),
             # but advertisement id is 1-based line number
             pred_markup[str(req_id)] = [str(idx + 1) for idx in pred_ad_idx_list]
-    assert pred_markup == direct_markup
+    # searcher returns matches, sorted by matching probability, so we re-sort the arrays for this comparison
+    assert {k: list(sorted(v)) for k, v in pred_markup.items()} == {k: list(sorted(v)) for k, v in direct_markup.items()}
 
     print("Calculating stats...")
     confusion_matrix = metrics.calc_confusion_matrix(true_markup, pred_markup, n_ads=len(ads), n_requests=len(requests))
