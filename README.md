@@ -14,15 +14,17 @@ All operations for project development and maintenance are described on [Wiki pa
 ├── .github/workflows/ - GitHub Actions script to generate report on GitHub Pages
 ├── gh_pages/ - source files for the report on GitHub Pages
 ├── research/ - place for research-related code and docs
-│   └── DESIGN.md - System Design Doc
+│   ├── DESIGN.md - System Design Doc
+│   └── *.ipynb - investigations of search techniques
 ├── search_pipeline/ - whole search process and calculation of metrics
 ├── utils/ - modules and tools to use for search and data operations
 ├── .dvcignore - auxiliary file for DVC
 ├── .gitignore - important ignore settings (also needed for DVC)
 ├── README.md - this document
 ├── data.dvc - DVC info on tracked content of "data/" directory (managed automatically)
-├── metrics_generator.py - script to generate "metrics.json" file on all available data
+├── interactive_search.py - test program for current search engine: interactive search in console
 ├── metrics.json - search metrics, which are used to track history and generate the report
 │   on GitHub Pages
+├── metrics_generator.py - script to generate "metrics.json" file on all available data
 └── requirements.txt - list of Python packages for installation
 ```
