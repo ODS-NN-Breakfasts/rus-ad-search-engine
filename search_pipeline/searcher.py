@@ -41,6 +41,7 @@ def search(encoded_request: Any, encoded_ad_list: List[Any], prob_thr=DEFAULT_PR
         # a threshold that is equal to some edge level in probs, so the difference between ">" and ">="
         # will become crusual, not just a small deviation
         if prob >= prob_thr:
-            found_idx_list.append(idx)
+            found_idx_list.append((idx, prob))
 
-    return found_idx_list
+    # return indexes sorted by largest probability
+    return [item[0] for item in sorted(found_idx_list, reverse=True, key=lambda item: item[1])]
