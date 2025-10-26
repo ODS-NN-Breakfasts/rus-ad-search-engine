@@ -51,7 +51,7 @@ def calc_optimal_threshold(probs, true_markup, n_requests, n_ads):
     if np.isinf(opt_thr):
         opt_thr = 1
 
-    return opt_thr
+    return float(opt_thr)  # default numpy's np.float32() can produce error on saving to JSON later
 
 
 def convert_probs_to_markup(probs, threshold, n_requests, n_ads):
