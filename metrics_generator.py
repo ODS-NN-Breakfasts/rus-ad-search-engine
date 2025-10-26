@@ -1,5 +1,7 @@
 import hashlib
 import json
+import time
+import argparse
 
 import numpy as np
 
@@ -15,19 +17,22 @@ MARKUP_PATH = "data/matching_db.txt"
 METRICS_PATH = "metrics.json"
 
 
-def calc_dataset_metrics():
+def calc_dataset_metrics(overwrite_flag):
     with open(REQUEST_DB_PATH, "r", encoding="utf-8") as f:
         requests = f.readlines()
     with open(AD_DB_PATH, "r", encoding="utf-8") as f:
         ads = f.readlines()
     true_markup = dataset_utils.load_matching_data(MARKUP_PATH)
 
+    beg_load_time = time.time()
     print("Encoding requests...")
     enc_requests = searcher.encode_strings(requests)
     assert len(enc_requests) == len(requests)
     print("Encoding advertisements...")
     enc_ads = searcher.encode_strings(ads)
     assert len(enc_ads) == len(ads)
+    end_load_time = time.time()
+    print(f"(encoding took {int(end_load_time - beg_load_time)} seconds)")
 
     print("Calculating match probabilities...")
     matching_probs = []
@@ -60,23 +65,36 @@ def calc_dataset_metrics():
 
     metrics.compare_with_saved_stats(all_stats, confusion_matrix)
 
-    print(f"Saving new stats to {METRICS_PATH}...")
-    with open(REQUEST_DB_PATH, "rb") as f:
-        req_db_hash_str = hashlib.md5(f.read()).hexdigest()
-    with open(AD_DB_PATH, "rb") as f:
-        ad_db_hash_str = hashlib.md5(f.read()).hexdigest()
-    with open(MARKUP_PATH, "rb") as f:
-        markup_hash_str = hashlib.md5(f.read()).hexdigest()
-    all_stats["data_hashes"] = {
-        "request_db": req_db_hash_str,
-        "ad_db": ad_db_hash_str,
-        "markup": markup_hash_str,
-    }
+    if overwrite_flag:
+        print(f"Saving new stats to {METRICS_PATH}...")
+        with open(REQUEST_DB_PATH, "rb") as f:
+            req_db_hash_str = hashlib.md5(f.read()).hexdigest()
+        with open(AD_DB_PATH, "rb") as f:
+            ad_db_hash_str = hashlib.md5(f.read()).hexdigest()
+        with open(MARKUP_PATH, "rb") as f:
+            markup_hash_str = hashlib.md5(f.read()).hexdigest()
+        all_stats["data_hashes"] = {
+            "request_db": req_db_hash_str,
+            "ad_db": ad_db_hash_str,
+            "markup": markup_hash_str,
+        }
 
-    with open(METRICS_PATH, "w", encoding="utf-8") as f:
-        f.write(json.dumps(all_stats, indent=4))
+        with open(METRICS_PATH, "w", encoding="utf-8") as f:
+            f.write(json.dumps(all_stats, indent=4))
+    else:
+        print("New stats were not saved")
+
     print("Done")
 
 
 if __name__ == "__main__":
-    calc_dataset_metrics()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "-t",
+        "--test",
+        help=f"Don't overwrite {METRICS_PATH} file",
+        action="store_true",
+    )
+    args = parser.parse_args()
+    calc_dataset_metrics(not args.test)
+
