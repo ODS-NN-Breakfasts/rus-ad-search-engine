@@ -17,6 +17,15 @@ There is a set of advertisements in Russian (and partially English) language, wh
 
 ## Review of Text Processing Tools
 
+### Typo Correction
+
+Only the following approaches for Russian have been found:
+1. Word-based with Levenshtein distance:
+    1. https://github.com/barrust/pyspellchecker
+    1. https://github.com/wolfgarbe/SymSpell
+1. Text-based:
+    1. Several models on HF: https://huggingface.co/models?language=ru&sort=trending&search=grammar ([this one](https://huggingface.co/MRNH/mbart-russian-grammar-corrector) was tested online and works very poor: don't correct most of the typos and adds extra words to output)
+
 ### Text Preprocessing
 
 [Natasha](https://github.com/natasha/natasha) has:
