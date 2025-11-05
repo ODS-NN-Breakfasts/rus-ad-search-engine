@@ -19,18 +19,19 @@ There is a set of advertisements in Russian (and partially English) language, wh
 
 ### Text Preprocessing
 
-To be organized into tables
-
-[flair](https://flairnlp.github.io/docs/intro) has: 
-* POS-tagging (multilingual - check rus), 
-* NER (multilingual - check rus)
-* more
+[Natasha](https://github.com/natasha/natasha) has:
+* Tokenization
+* Embeddings
+* NER
+* other ([overview article in Russian](https://habr.com/ru/articles/516098/))
 
 [SpaCy](https://spacy.io/usage/models#quickstart) has:
 * Tokenization
 * POS Tagging
 * Lemmatization
 * Named Entity Recognition
+
+Also [flair](https://flairnlp.github.io/docs/intro) has been considered, as it has multilingual POS-tagging and NER (and also [a wrapper for Russian FastText embeddings](https://flairnlp.github.io/flair/v0.15.1/tutorial/tutorial-embeddings/classic-word-embeddings.html)), but it does not look reliable, comparing with other alternatives.
 
 #### Lemmatization
 | Library         | Licence   | Languages  | Models    | Model Licences | OOV     | Comment |
@@ -59,9 +60,7 @@ To be organized into tables
 | Library                                                            | Licence  | Languages   | Models                                                                                      | Model Licences | OOV | Comment                                                                                                                                                            |
 |--------------------------------------------------------------------|----------|-------------|---------------------------------------------------------------------------------------------|----------------|-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [SpaCy](https://spacy.io/usage/models#quickstart) | MIT | rus<br/>eng | "ru_core_news_md"  <br/> "ru_core_news_lg" <br/> "en_core_news_md"  <br/> "en_core_news_lg" | MIT | No  | Only "md" / "lg" models have vector vocabulary support (see first important note [here](https://spacy.io/usage/linguistic-features#vectors-similarity)<br/> Similarity |
-
-
-
+| [NeVec](https://github.com/natasha/navec) | MIT | rus | `navec_hudlit_v1_*.tar` | - | No | - |
 
 ## Data Format
 
