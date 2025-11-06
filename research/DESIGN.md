@@ -69,7 +69,7 @@ Also [flair](https://flairnlp.github.io/docs/intro) has been considered, as it h
 | Library                                                            | Licence  | Languages   | Models                                                                                      | Model Licences | OOV | Comment                                                                                                                                                            |
 |--------------------------------------------------------------------|----------|-------------|---------------------------------------------------------------------------------------------|----------------|-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [SpaCy](https://spacy.io/usage/models#quickstart) | MIT | rus<br/>eng | "ru_core_news_md"  <br/> "ru_core_news_lg" <br/> "en_core_news_md"  <br/> "en_core_news_lg" | MIT | No  | Only "md" / "lg" models have vector vocabulary support (see first important note [here](https://spacy.io/usage/linguistic-features#vectors-similarity)<br/> Similarity |
-| [NeVec](https://github.com/natasha/navec) | MIT | rus | `navec_hudlit_v1_*.tar` | - | No | - |
+| [Navec](https://github.com/natasha/navec) | MIT | rus | `navec_hudlit_v1_*.tar` | - | No | - |
 
 ## Data Format
 
