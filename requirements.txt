@@ -14,6 +14,8 @@ pymorphy3
 torch --index-url https://download.pytorch.org/whl/cpu
 transformers
 sentence_transformers
+yargy
+ipymarkup
 
 # images
 opencv-python
