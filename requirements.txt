@@ -15,7 +15,7 @@ torch --index-url https://download.pytorch.org/whl/cpu
 transformers
 sentence_transformers
 yargy
-setuptools<81  # yargy->pymorphy2->setuptools requires old version, see https://setuptools.pypa.io/en/latest/pkg_resources.html
+setuptools<80  # yargy->pymorphy2->setuptools requires old version (v80 generates warning), see https://setuptools.pypa.io/en/latest/pkg_resources.html
 ipymarkup
 graphviz  # requires separate installation of graphviz to the system
 
