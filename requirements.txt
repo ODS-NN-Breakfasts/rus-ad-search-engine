@@ -12,15 +12,20 @@ plotly
 nltk
 pymorphy3
 torch --index-url https://download.pytorch.org/whl/cpu
+torchvision
 transformers
 sentence_transformers
+sentencepiece
 yargy
 setuptools<80  # yargy->pymorphy2->setuptools requires old version (v80 generates warning), see https://setuptools.pypa.io/en/latest/pkg_resources.html
 ipymarkup
 graphviz  # requires separate installation of graphviz to the system
+#Cython  # ruclip dependency
+#ruclip
 
 # images
 opencv-python
+openai-clip
 
 # packages for GitHub Page build
 -r gh_pages/py_reqs.txt
