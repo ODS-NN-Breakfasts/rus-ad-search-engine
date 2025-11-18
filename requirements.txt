@@ -22,6 +22,8 @@ ipymarkup
 graphviz  # requires separate installation of graphviz to the system
 #Cython  # ruclip dependency
 #ruclip
+rdflib
+slovnet
 
 # images
 opencv-python

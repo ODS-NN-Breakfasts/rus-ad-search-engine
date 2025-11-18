@@ -10,3 +10,6 @@ __pycache__/
 .vscode/
 research/yolov4
 research/results
+
+research/navec_news_v1_1B_250K_300d_100q.tar
+research/slovnet_syntax_news_v1.tar
