@@ -61,7 +61,9 @@ def show_request_and_adverts(requests_file, ads_file, matching_dict, save_to=Non
 
     # save to file save_to
     if save_to:
-        os.makedirs(os.path.dirname(save_to), exist_ok=True)
+        dir_name = os.path.dirname(save_to)
+        if len(dir_name) > 0:
+            os.makedirs(dir_name, exist_ok=True)
         with open(save_to, "w", encoding="utf-8") as f:
             f.write(result_text)
         print(f"\n✅ Result has been saved to: {save_to}")
