@@ -14,3 +14,5 @@ research/results
 research/navec_news_v1_1B_250K_300d_100q.tar
 research/navec_hudlit_v1_12B_500K_300d_100q.tar
 research/slovnet_syntax_news_v1.tar
+
+research/ruwordnet-2021.db

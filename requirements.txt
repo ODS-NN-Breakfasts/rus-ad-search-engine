@@ -24,6 +24,7 @@ graphviz  # requires separate installation of graphviz to the system
 #ruclip
 rdflib
 slovnet
+ruwordnet
 
 # images
 opencv-python

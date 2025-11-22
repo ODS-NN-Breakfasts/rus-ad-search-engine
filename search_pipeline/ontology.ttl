@@ -1,0 +1,1642 @@
+@prefix local: <http://localhost/> .
+
+local:obj107762N local:has_name "берет",
+        "беретик",
+        "беретка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj107788N local:has_name "чепец",
+        "чепчик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108795N,
+        local:obj108796N .
+
+local:obj107828N local:has_name "мундир" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj107917N local:has_name "запонка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107916N .
+
+local:obj108104N local:has_name "блуза",
+        "блузка",
+        "блузочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108468N .
+
+local:obj108131N local:has_name "панама",
+        "панамка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj108159N local:has_name "полупальто" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj6892N .
+
+local:obj108160N local:has_name "полушубок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108154N .
+
+local:obj108170N local:has_name "сарафан",
+        "сарафанчик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108171N .
+
+local:obj108287N local:has_name "галифе" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N .
+
+local:obj108328N local:has_name "картуз" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108370N,
+        local:obj4003N .
+
+local:obj108350N local:has_name "колпак",
+        "колпачок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj108375N local:has_name "френч" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4004N .
+
+local:obj108380N local:has_name "смокинг" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108381N,
+        local:obj136155N .
+
+local:obj108393N local:has_name "джинсы" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N .
+
+local:obj108409N local:has_name "кальсоны",
+        "подштаники" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N,
+        local:obj132388N,
+        local:obj8351N .
+
+local:obj108428N local:has_name "колготки",
+        "колготы" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4172N .
+
+local:obj108446N local:has_name "ползунки" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj2176N .
+
+local:obj108476N local:has_name "капот",
+        "пеньюар" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj108533N local:has_name "футболка",
+        "футболочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108065N,
+        local:obj132388N .
+
+local:obj108534N local:has_name "джемпер",
+        "пуловер" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj132389N .
+
+local:obj108556N local:has_name "маечка",
+        "майка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj132388N,
+        local:obj8351N .
+
+local:obj108572N local:has_name "кринолин" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108092N .
+
+local:obj108584N local:has_name "варежка",
+        "варежки" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108578N,
+        local:obj5854N .
+
+local:obj108613N local:has_name "комбинезон" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108612N .
+
+local:obj108615N local:has_name "жакет",
+        "жакетка",
+        "женский жакет",
+        "женский пиджак" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N,
+        local:obj108381N .
+
+local:obj108616N local:has_name "пижама",
+        "пижамка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj136289N .
+
+local:obj108628N local:has_name "сомбреро" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj5823N .
+
+local:obj108720N local:has_name "ботфорт",
+        "ботфорты" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124872N .
+
+local:obj108777N local:has_name "скафандр" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4228N .
+
+local:obj108848N local:has_name "бурка",
+        "мусульманская бурка",
+        "паранджа",
+        "чадра" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj108850N local:has_name "тюрбан",
+        "чалма" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj108907N local:has_name "башлык" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj108929N local:has_name "тюбетейка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj8114N .
+
+local:obj108933N local:has_name "полушалок",
+        "шаль" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108676N .
+
+local:obj108937N local:has_name "шаровары" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N .
+
+local:obj108955N local:has_name "тужурка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108048N .
+
+local:obj109082N local:has_name "передник",
+        "фартук" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj109144N local:has_name "манто" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4024N .
+
+local:obj109166N local:has_name "застежка молния",
+        "застежка-молния",
+        "молния" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107916N .
+
+local:obj109168N local:has_name "пуговица",
+        "пуговичка",
+        "пуговка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107916N .
+
+local:obj109363N local:has_name "ливрея" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj109428N local:has_name "рукав",
+        "рукав одежды" ;
+    local:has_part local:obj109455N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj109454N local:has_name "манжета",
+        "манжета рукава" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj109455N .
+
+local:obj109518N local:has_name "плащ",
+        "плащ-накидка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108474N .
+
+local:obj109519N local:has_name "бурка",
+        "кавказская бурка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108208N,
+        local:obj108474N .
+
+local:obj109526N local:has_name "рубашка поло",
+        "тенниска" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108065N .
+
+local:obj109581N local:has_name "бикини" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj151353N .
+
+local:obj109603N local:has_name "пряжка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107916N .
+
+local:obj109607N local:has_name "рейтузики",
+        "рейтузы" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N,
+        local:obj108555N .
+
+local:obj109624N local:has_name "ветровка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj146827N .
+
+local:obj109646N local:has_name "дубленка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj5051N .
+
+local:obj109693N local:has_name "гетры" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108963N .
+
+local:obj109778N local:has_name "ватная куртка",
+        "ватная фуфайка",
+        "ватник",
+        "куртка на вате",
+        "стеганая фуфайка",
+        "телогрейка",
+        "фуфайка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108048N .
+
+local:obj109952N local:has_name "косоворотка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108065N,
+        local:obj108208N .
+
+local:obj109954N local:has_name "косынка",
+        "косыночка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108676N .
+
+local:obj109998N local:has_name "фата" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108474N,
+        local:obj108795N .
+
+local:obj110050N local:has_name "женская комбинация",
+        "комбинация" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141911N .
+
+local:obj110118N local:has_name "гульфик",
+        "ширинка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj110246N local:has_name "роба",
+        "спецовка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4228N .
+
+local:obj110265N local:has_name "кокетка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj110370N local:has_name "пончо" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108474N .
+
+local:obj110639N local:has_name "лиф",
+        "лифовый" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj110651N local:has_name "муфта",
+        "муфта для рук" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj110732N local:has_name "кокошник" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108357N,
+        local:obj108795N,
+        local:obj126664N .
+
+local:obj111138N local:has_name "тельник",
+        "тельняшка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108208N,
+        local:obj132388N .
+
+local:obj111384N local:has_name "леггинсы",
+        "легинсы",
+        "лосины" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N .
+
+local:obj111415N local:has_name "безрукавка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108468N,
+        local:obj1256N .
+
+local:obj112224N local:has_name "капюшон" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj112346N local:has_name "ряса" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj129237N .
+
+local:obj112368N local:has_name "жилет",
+        "жилетка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj112527N local:has_name "одежда на пуху",
+        "пуховая одежда",
+        "пуховик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4024N .
+
+local:obj112609N local:has_name "фрак" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj109864N,
+        local:obj136155N .
+
+local:obj112975N local:has_name "шалька" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107813N .
+
+local:obj113301N local:has_name "еврейская кипа",
+        "ермолка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108370N .
+
+local:obj113600N local:has_name "шлемофон" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj113758N local:has_name "макинтош",
+        "плащ макинтош" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4024N,
+        local:obj8352N .
+
+local:obj114130N local:has_name "ушанка",
+        "шапка с ушами",
+        "шапка-ушанка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj8114N .
+
+local:obj114308N local:has_name "котелок",
+        "мужской котелок",
+        "шляпа-котелок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141924N .
+
+local:obj117163N local:has_name "петлица" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj117165N .
+
+local:obj117273N local:has_name "лохмотья",
+        "отрепье",
+        "рубище",
+        "тряпье" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj117279N local:has_name "волнистая сборка",
+        "волнистая складка",
+        "сборка",
+        "сборка на ткани" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj116777N .
+
+local:obj117635N local:has_name "кушак" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj112182N .
+
+local:obj118021N local:has_name "борт",
+        "борт одежды" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj118086N local:has_name "кнопка",
+        "кнопка для одежды",
+        "кнопочка",
+        "кнопочная застежка",
+        "одежная кнопка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107916N .
+
+local:obj118277N local:has_name "воротник-стойка",
+        "стойка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107813N .
+
+local:obj120079N local:has_name "грация" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj120078N .
+
+local:obj120246N local:has_name "мантия" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108474N .
+
+local:obj120900N local:has_name "кимоно" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj120945N local:has_name "балетная пачка",
+        "пачка",
+        "пачка балерины" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108092N .
+
+local:obj121117N local:has_name "карман",
+        "карман одежды",
+        "карманчик",
+        "кармашек" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj121168N local:has_name "шеврон" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj117165N .
+
+local:obj121683N local:has_name "бабочка",
+        "галстук-бабочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108027N .
+
+local:obj124080N local:has_name "чулки",
+        "чулок",
+        "чулочек",
+        "чулочное изделие" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4172N .
+
+local:obj124396N local:has_name "детский нагрудник",
+        "нагрудник",
+        "нагрудник для кормления",
+        "слюнявчик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj2176N .
+
+local:obj124397N local:has_name "манишка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj124399N local:has_name "подклад",
+        "подкладка",
+        "подкладка на одежде",
+        "подкладка одежды" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj124459N local:has_name "воротник жабо",
+        "жабо" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107813N .
+
+local:obj124514N local:has_name "гофре" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj116777N .
+
+local:obj124562N local:has_name "рюш",
+        "рюшечка",
+        "рюшка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj117278N .
+
+local:obj124847N local:has_name "венец",
+        "корона монарха",
+        "царская корона",
+        "царский венец" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj124959N local:has_name "аксельбант" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj116801N .
+
+local:obj124995N local:has_name "амазонка",
+        "амазонка для верховой езды",
+        "костюм амазонка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N,
+        local:obj124872N .
+
+local:obj125137N local:has_name "балахон",
+        "бесформенная одежда",
+        "бесформенный балахон" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj125452N local:has_name "бретели",
+        "бретель",
+        "бретелька",
+        "бретелька одежды" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj125616N local:has_name "визитка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124872N .
+
+local:obj125873N local:has_name "гидрокомбинезон",
+        "гидрокостюм" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4228N .
+
+local:obj126078N local:has_name "дождевик",
+        "плащ-дождевик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj146827N .
+
+local:obj126161N local:has_name "жупан" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124873N .
+
+local:obj126400N local:has_name "камзол" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124872N .
+
+local:obj126411N local:has_name "вырез каре",
+        "каре" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj130648N .
+
+local:obj126442N local:has_name "клапан",
+        "клапан кармана" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj116800N,
+        local:obj133133N .
+
+local:obj126453N local:has_name "камилавка",
+        "клобук" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj126469N local:has_name "кокарда" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj117165N .
+
+local:obj126823N local:has_name "мужская рубашка",
+        "мужская сорочка",
+        "сорочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108065N,
+        local:obj108208N .
+
+local:obj126986N local:has_name "мини",
+        "мини-юбка",
+        "юбка мини" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108092N .
+
+local:obj126987N local:has_name "миди" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj126994N local:has_name "митра",
+        "православная митра" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj127076N local:has_name "наколенник" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj144427N .
+
+local:obj127210N local:has_name "обнова",
+        "обновка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj127539N local:has_name "пинетка",
+        "пинетки" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108575N .
+
+local:obj128987N local:has_name "салоп" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N,
+        local:obj124872N .
+
+local:obj129238N local:has_name "сутана",
+        "сутана священника" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj129237N .
+
+local:obj129279N local:has_name "тога" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124872N .
+
+local:obj129317N local:has_name "брючная тройка",
+        "костюм-тройка",
+        "тройка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108612N .
+
+local:obj129328N local:has_name "древнеримская туника",
+        "туника" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124872N .
+
+local:obj129520N local:has_name "черкеска" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124874N .
+
+local:obj129537N local:has_name "распашонка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj2176N .
+
+local:obj129592N local:has_name "эполет" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4023N .
+
+local:obj130082N local:has_name "водолазка",
+        "свитер с высоким воротником",
+        "свитер-водолазка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108882N .
+
+local:obj130110N local:has_name "волан" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj117278N .
+
+local:obj131245N local:has_name "нательная фуфайка",
+        "трикотажная фуфайка",
+        "фуфайка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108065N,
+        local:obj132388N .
+
+local:obj131463N local:has_name "заплата",
+        "заплатка",
+        "латка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj116800N .
+
+local:obj131915N local:has_name "клеш" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108928N .
+
+local:obj132333N local:has_name "мотокаска",
+        "мотоциклетная каска",
+        "мотоциклетный шлем",
+        "мотошлем" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108325N .
+
+local:obj132452N local:has_name "бронежилет",
+        "броник",
+        "пуленепробиваемый жилет" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj144427N .
+
+local:obj133092N local:has_name "спортивные трикотажные изделия",
+        "спортивный трикотаж" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj9846N .
+
+local:obj134522N local:has_name "реглан" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108928N,
+        local:obj1256N .
+
+local:obj134581N local:has_name "риза",
+        "риза священника",
+        "риза священнослужителя" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108474N,
+        local:obj129237N .
+
+local:obj134737N local:has_name "одежда сафари",
+        "сафари",
+        "стиль сафари" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj135441N local:has_name "тулья",
+        "тулья шляпы" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj135992N local:has_name "шорты бермуды" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108139N .
+
+local:obj136062N local:has_name "блейзер" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108381N .
+
+local:obj136288N local:has_name "ночная рубашка",
+        "ночная сорочка",
+        "ночнушка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj136289N .
+
+local:obj136960N local:has_name "вечернее платье" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108171N,
+        local:obj136155N .
+
+local:obj137666N local:has_name "домашний халат" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108373N,
+        local:obj141910N .
+
+local:obj137897N local:has_name "мужской цилиндр",
+        "цилиндр" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141924N .
+
+local:obj140884N local:has_name "спинка",
+        "спинка одежды" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj140889N local:has_name "полка",
+        "полочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj141427N local:has_name "костюм",
+        "костюмчик",
+        "сценический костюм",
+        "театральный костюм" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj142084N local:has_name "бейсболка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107897N .
+
+local:obj142589N local:has_name "вязаная кофта",
+        "кардиган",
+        "трикотажная кофта",
+        "трикотажный жакет",
+        "трикотажный кардиган" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108468N,
+        local:obj132389N .
+
+local:obj143166N local:has_name "женская сорочка",
+        "нижняя сорочка",
+        "сорочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141911N .
+
+local:obj144641N local:has_name "шейный платок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108676N .
+
+local:obj144642N local:has_name "хиджаб" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj146418N,
+        local:obj155253N .
+
+local:obj145497N local:has_name "подрясник" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj129237N .
+
+local:obj145860N local:has_name "плечо",
+        "плечо одежды" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj146573N local:has_name "локоть" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj146680N local:has_name "палантин" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108643N .
+
+local:obj147323N local:has_name "v-образный ворот",
+        "v-образный вырез",
+        "вырез мысом",
+        "горловина мысом",
+        "мыс",
+        "мыс выреза",
+        "мыс горловины",
+        "треугольный вырез" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj130648N .
+
+local:obj147530N local:has_name "старинный шлем",
+        "шлем",
+        "шлем воина" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108326N .
+
+local:obj147531N local:has_name "герметичный шлем",
+        "гермошлем" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108326N .
+
+local:obj147586N local:has_name "палец",
+        "палец перчатки" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj148113N local:has_name "брюки со складкой",
+        "брюки со стрелкой",
+        "классические брюки" ;
+    local:has_part local:obj152472N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N .
+
+local:obj148483N local:has_name "термобелье" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj8351N .
+
+local:obj148688N local:has_name "звездочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj117165N .
+
+local:obj148758N local:has_name "бюстгальтер на косточках" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108662N .
+
+local:obj148759N local:has_name "косточка",
+        "косточка от бюстгальтера",
+        "косточки бюстгальтера" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj149005N local:has_name "ремень",
+        "ремешок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj112182N .
+
+local:obj149504N local:has_name "брючный костюм" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N,
+        local:obj108612N .
+
+local:obj149787N local:has_name "камуфлированная одежда",
+        "камуфляж",
+        "камуфляжная одежда",
+        "камуфляжный костюм" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj150497N local:has_name "парео",
+        "парео для пляжа",
+        "пляжное парео" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108676N .
+
+local:obj150498N local:has_name "спортивные брюки",
+        "треники",
+        "тренировочные брюки",
+        "тренировочные штаны" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N .
+
+local:obj151371N local:has_name "застежка липучка",
+        "застежка-липучка",
+        "липучка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107916N .
+
+local:obj151784N local:has_name "килт",
+        "шотландский килт" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108208N .
+
+local:obj152609N local:has_name "балаклава" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj152769N local:has_name "пояс чемпиона",
+        "чемпионский пояс" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj112182N .
+
+local:obj153240N local:has_name "свитшот",
+        "толстовка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108065N,
+        local:obj108555N .
+
+local:obj153362N local:has_name "парадная одежда" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108357N .
+
+local:obj153891N local:has_name "шляпа с вуалью",
+        "шляпка с вуалью" ;
+    local:has_part local:obj125773N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141923N .
+
+local:obj154022N local:has_name "ухо",
+        "ухо шапки" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj154792N local:has_name "боди" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj154939N local:has_name "сари" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj155125N local:has_name "вышиванка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108357N .
+
+local:obj155252N local:has_name "никаб" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108795N .
+
+local:obj155398N local:has_name "бомбер",
+        "куртка-бомбер",
+        "летная куртка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108048N .
+
+local:obj165886N local:has_name "нагрудник",
+        "нагрудник для игрока",
+        "спортивный нагрудник" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj144427N .
+
+local:obj165975N local:has_name "джинсовая куртка",
+        "джинсовка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108048N .
+
+local:obj166103N local:has_name "бегунок",
+        "бегунок для молнии",
+        "замок для молнии" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj107916N .
+
+local:obj166214N local:has_name "кожаная куртка",
+        "кожанка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133178N .
+
+local:obj3440N local:has_name "парадная форма" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj4002N local:has_name "армейская униформа",
+        "армейская форма",
+        "военная одежда",
+        "военная форма",
+        "военная форма одежды",
+        "военный мундир",
+        "обмундирование военнослужащих" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj5014N local:has_name "тулуп",
+        "тулупчик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108154N .
+
+local:obj5185N local:has_name "домашние тапки",
+        "домашние тапочки",
+        "домашние туфли",
+        "комнатные туфли",
+        "тапка",
+        "тапки",
+        "тапочка",
+        "тапочки" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141910N .
+
+local:obj5427N local:has_name "бескозырка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj153642N .
+
+local:obj5856N local:has_name "перчатки" ;
+    local:has_part local:obj131994N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj5854N .
+
+local:obj8113N local:has_name "пилотка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj8372N local:has_name "шинель" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj8373N local:has_name "бушлат" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj8752N local:has_name "папаха" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj8114N .
+
+local:obj8753N local:has_name "панталончики",
+        "панталоны" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108195N,
+        local:obj141911N .
+
+local:obj107812N local:has_name "ворот",
+        "ворот одежды",
+        "вырез ворота" ;
+    local:is_included local:parsed_objects .
+
+local:obj107897N local:has_name "кепи",
+        "кепка",
+        "кепочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj108027N local:has_name "галстук" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108208N .
+
+local:obj108139N local:has_name "шортики",
+        "шорты" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108194N .
+
+local:obj108155N local:has_name "зимняя одежда" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4024N .
+
+local:obj108195N local:has_name "трусики",
+        "трусы" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj132388N,
+        local:obj8351N .
+
+local:obj108325N local:has_name "защитная каска",
+        "каска" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108324N .
+
+local:obj108373N local:has_name "халат",
+        "халатик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108575N local:has_name "носки",
+        "носок",
+        "носочек",
+        "носочное изделие" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4172N .
+
+local:obj108578N local:has_name "рукавица",
+        "рукавичка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj5854N .
+
+local:obj108605N local:has_name "брючина",
+        "штанина" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj108643N local:has_name "кашне",
+        "шарф",
+        "шарфик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108662N local:has_name "бюстгальтер",
+        "лифчик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141911N .
+
+local:obj108796N local:has_name "детский головной убор" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj108882N local:has_name "свитер",
+        "свитерок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj132389N .
+
+local:obj108963N local:has_name "гольфы" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4172N .
+
+local:obj109458N local:has_name "лацкан" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj109456N .
+
+local:obj109582N local:has_name "купальник",
+        "купальный костюм" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N,
+        local:obj136071N .
+
+local:obj109864N local:has_name "сюртук" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108381N .
+
+local:obj113033N local:has_name "петелька",
+        "петля",
+        "петля для пуговицы" ;
+    local:is_included local:parsed_objects .
+
+local:obj114030N local:has_name "мыс",
+        "мысок",
+        "нос",
+        "носок",
+        "носочек",
+        "носочная часть" ;
+    local:is_included local:parsed_objects .
+
+local:obj114031N local:has_name "пятка" ;
+    local:is_included local:parsed_objects .
+
+local:obj114687N local:has_name "пола",
+        "пола одежды" ;
+    local:is_included local:parsed_objects .
+
+local:obj116801N local:has_name "галун",
+        "позумент" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj116800N .
+
+local:obj119668N local:has_name "поля",
+        "поля шляпы" ;
+    local:is_included local:parsed_objects .
+
+local:obj123944N local:has_name "изнанка",
+        "изнаночная сторона" ;
+    local:is_included local:parsed_objects .
+
+local:obj124376N local:has_name "вешалка",
+        "вешалка на одежде" ;
+    local:is_included local:parsed_objects .
+
+local:obj124424N local:has_name "декольте" ;
+    local:is_included local:parsed_objects .
+
+local:obj124873N local:has_name "полукафтан" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124874N .
+
+local:obj125773N local:has_name "вуаль",
+        "вуаль на шляпке" ;
+    local:is_included local:parsed_objects .
+
+local:obj126664N local:has_name "старинный головной убор" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124872N .
+
+local:obj126890N local:has_name "лампас" ;
+    local:is_included local:parsed_objects .
+
+local:obj131928N local:has_name "козырек",
+        "козырек головного убора" ;
+    local:is_included local:parsed_objects .
+
+local:obj131994N local:has_name "краги",
+        "краги перчаток" ;
+    local:is_included local:parsed_objects .
+
+local:obj133178N local:has_name "кожаная одежда",
+        "одежда из кожи" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj136071N local:has_name "купальные принадлежности" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj139532N local:has_name "талия",
+        "талия на одежде",
+        "талия одежды" ;
+    local:is_included local:parsed_objects .
+
+local:obj139585N local:has_name "шлейф",
+        "шлейф платья" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj113762N .
+
+local:obj141923N local:has_name "дамская шляпа",
+        "женская шляпа",
+        "женская шляпка",
+        "шляпка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108795N .
+
+local:obj146418N local:has_name "головной платок",
+        "платок на голову" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108676N,
+        local:obj3510N .
+
+local:obj147466N local:has_name "колени штанов",
+        "коленка",
+        "колено" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj147510N local:has_name "юбка",
+        "юбка платья" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj151353N local:has_name "раздельный купальник" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj109582N .
+
+local:obj152472N local:has_name "стрелка",
+        "стрелка на брюках" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj116777N .
+
+local:obj153642N local:has_name "форменный головной убор" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj155253N local:has_name "мусульманский головной убор" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj4003N local:has_name "фуражка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108370N .
+
+local:obj4004N local:has_name "китель" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3135N .
+
+local:obj4023N local:has_name "наплечный знак",
+        "погон" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj117165N .
+
+local:obj6892N local:has_name "пальтишко",
+        "пальто" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4024N .
+
+local:obj8352N local:has_name "плащ",
+        "плащ-пальто" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj146827N .
+
+local:obj9846N local:has_name "одежда для спорта",
+        "одежда для спорта и отдыха",
+        "спортивная одежда",
+        "спортивная форма" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108154N local:has_name "доха",
+        "пальто из меха",
+        "шуба",
+        "шубка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj5051N .
+
+local:obj108171N local:has_name "дамское платье",
+        "женское платье",
+        "платье",
+        "платьице" ;
+    local:has_part local:obj120078N,
+        local:obj124424N,
+        local:obj139585N,
+        local:obj147510N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj108324N local:has_name "защитный головной убор" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj144427N .
+
+local:obj108326N local:has_name "защитный шлем",
+        "шлем" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108324N .
+
+local:obj109455N local:has_name "обшлаг" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj109456N .
+
+local:obj113762N local:has_name "подол",
+        "подол одежды" ;
+    local:is_included local:parsed_objects .
+
+local:obj120078N local:has_name "корсет",
+        "корсет платья" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj112182N,
+        local:obj8351N .
+
+local:obj124874N local:has_name "кафтан",
+        "старинный кафтан" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj124872N .
+
+local:obj136289N local:has_name "ночная одежда",
+        "ночное белье",
+        "одежда для сна" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj141910N,
+        local:obj8351N .
+
+local:obj141924N local:has_name "мужская шляпа" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108370N,
+        local:obj5823N .
+
+local:obj5051N local:has_name "меховая одежда",
+        "овчинно-шубные изделия" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108155N .
+
+local:obj5823N local:has_name "шляпа" ;
+    local:has_part local:obj119668N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj107813N local:has_name "воротник",
+        "воротничок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj108092N local:has_name "юбка",
+        "юбочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj108468N local:has_name "кофта",
+        "кофточка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N .
+
+local:obj108612N local:has_name "костюм",
+        "костюмчик" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108928N local:has_name "крой",
+        "крой одежды",
+        "покрой",
+        "покрой одежды",
+        "фасон",
+        "фасон одежды",
+        "фасончик" ;
+    local:is_included local:parsed_objects .
+
+local:obj109456N local:has_name "отворот" ;
+    local:is_included local:parsed_objects .
+
+local:obj116777N local:has_name "складка",
+        "складка на ткани",
+        "складка ткани",
+        "складочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj117278N local:has_name "оборка",
+        "оборочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj133133N .
+
+local:obj130648N local:has_name "вырез горловины",
+        "горловина",
+        "горловина одежды" ;
+    local:is_included local:parsed_objects .
+
+local:obj132389N local:has_name "верхнее трикотажное изделие",
+        "верхний трикотаж" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108555N .
+
+local:obj136155N local:has_name "вечерний туалет",
+        "вечерняя одежда" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108357N,
+        local:obj1256N .
+
+local:obj141910N local:has_name "домашняя одежда",
+        "одежда для дома" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj146827N local:has_name "одежда от дождя и ветра" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj144427N .
+
+local:obj2176N local:has_name "детская одежда" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj4228N local:has_name "одежда для работы",
+        "прозодежда",
+        "производственная одежда",
+        "рабочая одежда",
+        "рабочий комбинезон",
+        "специальная одежда",
+        "спецкостюм",
+        "спецодежда",
+        "спецформа" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj5854N local:has_name "перчаточные изделия" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj8114N local:has_name "шапка",
+        "шапочка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj3510N .
+
+local:obj108048N local:has_name "куртка",
+        "курточка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj4024N .
+
+local:obj108357N local:has_name "наряд",
+        "нарядная одежда",
+        "нарядный туалет",
+        "праздничный наряд",
+        "праздничный туалет" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108370N local:has_name "мужской головной убор" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108208N,
+        local:obj3510N .
+
+local:obj108381N local:has_name "пиджак",
+        "пиджачок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108555N local:has_name "изделие из трикотажа",
+        "изделие трикотажное",
+        "одежда из трикотажа",
+        "продукция трикотажной промышленности",
+        "трикотаж",
+        "трикотажная одежда",
+        "трикотажная продукция",
+        "трикотажное изделие" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj112182N local:has_name "пояс",
+        "поясок" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj116800N local:has_name "нашивка",
+        "нашивка на одежде" ;
+    local:is_included local:parsed_objects .
+
+local:obj129237N local:has_name "облачение",
+        "одежда священнослужителей",
+        "церковное облачение" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj141911N local:has_name "дамское белье",
+        "женское белье" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N,
+        local:obj8351N .
+
+local:obj4172N local:has_name "изделия чулочно-носочные",
+        "чулочно-носочные изделия" ;
+    local:has_part local:obj114030N,
+        local:obj114031N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108676N local:has_name "платок",
+        "платочек" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108795N local:has_name "дамский головной убор",
+        "женский головной убор" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108091N,
+        local:obj3510N .
+
+local:obj144427N local:has_name "защитная одежда" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108065N local:has_name "рубаха",
+        "рубашечка",
+        "рубашка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108474N local:has_name "накидка" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj117165N local:has_name "знак различия" ;
+    local:is_included local:parsed_objects .
+
+local:obj132388N local:has_name "бельевое трикотажное изделие",
+        "бельевой трикотаж",
+        "нижний трикотаж" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj108555N,
+        local:obj8351N .
+
+local:obj4024N local:has_name "верхняя одежда",
+        "теплая одежда",
+        "теплые вещи" ;
+    local:has_part local:obj109458N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108208N local:has_name "мужская одежда",
+        "мужской гардероб" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj107916N local:has_name "застежка" ;
+    local:is_included local:parsed_objects .
+
+local:obj8351N local:has_name "исподнее",
+        "нательное белье",
+        "нижнее белье",
+        "носильное белье" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108194N local:has_name "брюки",
+        "брючки",
+        "портки",
+        "штаны" ;
+    local:has_part local:obj108605N,
+        local:obj147466N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj124872N local:has_name "старинная одежда" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj3135N local:has_name "обмундирование",
+        "служебное обмундирование",
+        "униформа",
+        "форма",
+        "форма одежды",
+        "форменная одежда",
+        "форменное обмундирование",
+        "форменный костюм" ;
+    local:has_part local:obj117165N,
+        local:obj126890N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj108091N local:has_name "дамская одежда",
+        "женская одежда",
+        "женское одеяние",
+        "одежда для женщин" ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj3510N local:has_name "головной убор",
+        "убор" ;
+    local:has_part local:obj131928N ;
+    local:is_included local:parsed_objects ;
+    local:is_subclass local:obj1256N .
+
+local:obj133133N local:has_name "деталь одежды",
+        "часть одежды" ;
+    local:is_included local:parsed_objects .
+
+local:obj1256N local:has_name "гардероб",
+        "деталь туалета",
+        "костюм",
+        "наряд",
+        "одежда",
+        "одежка",
+        "одеяние",
+        "прикид",
+        "принадлежность одежды" ;
+    local:has_part local:obj107812N,
+        local:obj107916N,
+        local:obj108928N,
+        local:obj109456N,
+        local:obj113033N,
+        local:obj113762N,
+        local:obj114687N,
+        local:obj116800N,
+        local:obj117278N,
+        local:obj123944N,
+        local:obj124376N,
+        local:obj130648N,
+        local:obj133133N,
+        local:obj139532N ;
+    local:is_included local:parsed_objects .
+
