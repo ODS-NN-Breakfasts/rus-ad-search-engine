@@ -1,5 +1,288 @@
 @prefix local: <http://localhost/> .
 
+# === Attributes ===
+
+# gender attributes
+
+local:Man local:has_name "мужской",
+        "муж",
+        "мужск" ;
+    local:is_included local:gender ;
+    local:is_included local:parsed_attributes .
+
+local:Woman local:has_name "женский",
+        "жен",
+        "женск" ;
+    local:is_included local:gender ;
+    local:is_included local:parsed_attributes .
+
+local:Unisex local:has_name "унисекс",
+        "юнисекс" ;
+    local:is_included local:gender ;
+    local:is_included local:parsed_attributes .
+
+# seasonal attributes
+
+local:DemiSeason local:has_name "демисезонный",
+        "демсезон",
+        "демисезон",
+        "весенний",
+        "весна",
+        "осенний",
+        "осень",
+        "весна-осень",
+        "осень-весна" ;
+    local:is_included local:season ;
+    local:is_included local:parsed_attributes .
+
+local:Winter local:has_name "зимний",
+        "зима",
+        "зим",
+        "зимн" ;
+    local:is_included local:season ;
+    local:is_included local:parsed_attributes .
+
+local:Summer local:has_name "летний",
+        "лето",
+        "лет",
+        "летн" ;
+    local:is_included local:season ;
+    local:is_included local:parsed_attributes .
+
+# material attributes: natural, synthetic, blended, knitted, standalone
+
+local:Natural local:has_name "натуральный" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+local:Synthetic local:has_name "синтетический",
+        "синтетика" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+local:Blended local:has_name "гипюр",
+        "коттон-мемори",
+        "креп-стрейч",
+        "футер" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+local:Knitted local:has_name "трикотажный",
+        "трикотаж" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+local:Silk local:has_name "шёлковый",
+        "шёлк" ;
+    local:is_included local:material ;
+    local:is_subclass local:Natural ;
+    local:is_included local:parsed_attributes .
+
+local:Woolen local:has_name "шерстяной",
+        "шерсть" ;
+    local:is_included local:material ;
+    local:is_subclass local:Natural ;
+    local:is_included local:parsed_attributes .
+
+local:Linen local:has_name "льняной",
+        "лён" ;
+    local:is_included local:material ;
+    local:is_subclass local:Natural ;
+    local:is_included local:parsed_attributes .
+
+local:Cotton local:has_name "хлопковый",
+        "хлопок" ;
+    local:is_included local:material ;
+    local:is_subclass local:Natural ;
+    local:is_included local:parsed_attributes .
+
+local:Leather local:has_name "кожаный",
+        "кожа" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+local:EcoLeather local:has_name "кожзам",
+        "экокожа" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Hemp local:has_name "конопляный",
+        "конопля" ;
+    local:is_included local:material ;
+    local:is_subclass local:Natural ;
+    local:is_included local:parsed_attributes .
+
+local:SynthPad local:has_name "синтепоновый",
+        "синтепон" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Polyurethane local:has_name "полиуретановый",
+        "полиуретан" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Satin local:has_name "сатиновый",
+        "сатин" ;
+    local:is_included local:material ;
+    local:is_subclass local:Cotton ;
+    local:is_included local:parsed_attributes .
+
+local:Poplin local:has_name "поплиновый",
+        "поплин" ;
+    local:is_included local:material ;
+    local:is_subclass local:Cotton ;
+    local:is_included local:parsed_attributes .
+
+local:Calico local:has_name "бязевый",
+        "бязь" ;
+    local:is_included local:material ;
+    local:is_subclass local:Cotton ;
+    local:is_included local:parsed_attributes .
+
+local:Denim local:has_name "джинсовый",
+        "джинса",
+        "деним" ;
+    local:is_included local:material ;
+    local:is_subclass local:Cotton ;
+    local:is_included local:parsed_attributes .
+
+local:Corduroy local:has_name "вельветовый",
+        "вельвет" ;
+    local:is_included local:material ;
+    local:is_subclass local:Cotton ;
+    local:is_included local:parsed_attributes .
+
+local:Veil local:has_name "вуалевый",
+        "вуаль" ;
+    local:is_included local:material ;
+    local:is_subclass local:Cotton ;
+    local:is_included local:parsed_attributes .
+
+local:Bombazine local:has_name "бумазеевый",
+        "бомбазиновый",
+        "бумазея",
+        "бомбазин" ;
+    local:is_included local:material ;
+    local:is_subclass local:Cotton ;
+    local:is_included local:parsed_attributes .
+
+local:Tweed local:has_name "твидовый",
+        "твид" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Flannel local:has_name "фланелевый",
+        "фланель" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Cashmere local:has_name "кашемировый",
+        "кашемир" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Gabardine local:has_name "габардиновый",
+        "габардин" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Alpaca local:has_name "альпака" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Angora local:has_name "ангорский",
+        "ангора" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Flannelette local:has_name "байковый",
+        "байка" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Loden local:has_name "лоденовый",
+        "лоден" ;
+    local:is_included local:material ;
+    local:is_subclass local:Woolen ;
+    local:is_included local:parsed_attributes .
+
+local:Polyester local:has_name "полиестровый",
+        "полиэстровый",
+        "полиестер",
+        "полиэстер",
+        "полиэстэр",
+        "полиестр",
+        "полиэстр" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Nylon local:has_name "нейлоновый",
+        "нейлон" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Lycra local:has_name "лайкровый",
+        "эластановый",
+        "лайкра",
+        "эластан",
+        "спандекс" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Vyscose local:has_name "вискозовый",
+        "вискоза" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Acetate local:has_name "ацетатный",
+        "ацетат" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Acrylic local:has_name "акриловый",
+        "полиакриловый",
+        "акрил",
+        "полиакрил" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Polyamide local:has_name "полиамидный",
+        "полиамид" ;
+    local:is_included local:material ;
+    local:is_subclass local:Synthetic ;
+    local:is_included local:parsed_attributes .
+
+local:Membrane local:has_name "мембрана" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+local:Oxford local:has_name "оксфорд" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+local:Taslan local:has_name "таслан" ;
+    local:is_included local:material ;
+    local:is_included local:parsed_attributes .
+
+# === Objects ===
+
 local:obj107762N local:has_name "берет",
         "беретик",
         "беретка" ;
@@ -9,8 +292,7 @@ local:obj107762N local:has_name "берет",
 local:obj107788N local:has_name "чепец",
         "чепчик" ;
     local:is_included local:parsed_objects ;
-    local:is_subclass local:obj108795N,
-        local:obj108796N .
+    local:is_subclass local:obj108796N .
 
 local:obj107828N local:has_name "мундир" ;
     local:is_included local:parsed_objects ;
@@ -56,7 +338,7 @@ local:obj108328N local:has_name "картуз" ;
 local:obj108350N local:has_name "колпак",
         "колпачок" ;
     local:is_included local:parsed_objects ;
-    local:is_subclass local:obj3510N .
+    local:is_subclass local:obj108796N .
 
 local:obj108375N local:has_name "френч" ;
     local:is_included local:parsed_objects ;
@@ -147,7 +429,7 @@ local:obj108720N local:has_name "ботфорт",
 
 local:obj108777N local:has_name "скафандр" ;
     local:is_included local:parsed_objects ;
-    local:is_subclass local:obj4228N .
+    local:is_subclass local:obj2176N .
 
 local:obj108848N local:has_name "бурка",
         "мусульманская бурка",
@@ -1065,6 +1347,8 @@ local:obj108139N local:has_name "шортики",
 
 local:obj108155N local:has_name "зимняя одежда" ;
     local:is_included local:parsed_objects ;
+    local:has_only_season local:Winter ;
+    local:has_only_season local:DemiSeason ;
     local:is_subclass local:obj4024N .
 
 local:obj108195N local:has_name "трусики",
@@ -1113,6 +1397,7 @@ local:obj108662N local:has_name "бюстгальтер",
 
 local:obj108796N local:has_name "детский головной убор" ;
     local:is_included local:parsed_objects ;
+    local:has_only_gender local:Unisex ;
     local:is_subclass local:obj3510N .
 
 local:obj108882N local:has_name "свитер",
@@ -1193,8 +1478,7 @@ local:obj126664N local:has_name "старинный головной убор" ;
 local:obj126890N local:has_name "лампас" ;
     local:is_included local:parsed_objects .
 
-local:obj131928N local:has_name "козырек",
-        "козырек головного убора" ;
+local:obj131928N local:has_name "козырек" ;
     local:is_included local:parsed_objects .
 
 local:obj131994N local:has_name "краги",
@@ -1204,6 +1488,8 @@ local:obj131994N local:has_name "краги",
 local:obj133178N local:has_name "кожаная одежда",
         "одежда из кожи" ;
     local:is_included local:parsed_objects ;
+    local:has_only_material local:Leather ;
+    local:has_only_material local:EcoLeather ;
     local:is_subclass local:obj1256N .
 
 local:obj136071N local:has_name "купальные принадлежности" ;
@@ -1560,6 +1846,7 @@ local:obj4024N local:has_name "верхняя одежда",
 local:obj108208N local:has_name "мужская одежда",
         "мужской гардероб" ;
     local:is_included local:parsed_objects ;
+    local:has_only_gender local:Man ;
     local:is_subclass local:obj1256N .
 
 local:obj107916N local:has_name "застежка" ;
@@ -1603,6 +1890,7 @@ local:obj108091N local:has_name "дамская одежда",
         "женское одеяние",
         "одежда для женщин" ;
     local:is_included local:parsed_objects ;
+    local:has_only_gender local:Woman ;
     local:is_subclass local:obj1256N .
 
 local:obj3510N local:has_name "головной убор",
@@ -1623,6 +1911,7 @@ local:obj1256N local:has_name "гардероб",
         "одежка",
         "одеяние",
         "прикид",
+        "вещь",
         "принадлежность одежды" ;
     local:has_part local:obj107812N,
         local:obj107916N,
