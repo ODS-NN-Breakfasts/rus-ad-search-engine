@@ -105,7 +105,6 @@ def input_completer_func(text, state):
                 if len(found_obj_list) == 1 and not instance_req_flag and not part_req_flag:
                     options += [obj_name + " " + attr_name + " [attr]" for attr_name in global_cache["def_attrs"]]
 
-            # print(f"opts={options}")
             global_cache["text"] = text
             global_cache["opts"] = options
         else:
@@ -143,14 +142,13 @@ if __name__ == "__main__":
     print("Encoding ads...")
     with open(AD_DB_PATH, "r", encoding="utf-8") as f:
         ads = f.readlines()
-    #enc_ads = searcher.encode_strings(ads)
-    enc_ads = []
+    enc_ads = searcher.encode_strings(ads)
 
     readline.parse_and_bind("tab: complete")
     readline.set_completer_delims("")
     readline.set_completer(input_completer_func)
     while True:
-        request = input("Enter your request (or just \"q\" [\"й\"] to exit): ")
+        request = input("Enter your request, \": <tab>\" for instance list, \", <tab>\" for part list, or just \"q\" [\"й\"] to exit: ")
         if request == "q" or request == "й":
             break
 
@@ -159,13 +157,15 @@ if __name__ == "__main__":
             continue
 
         enc_req = searcher.encode_strings([request])[0]
-        found_ad_idx_list = searcher.search(enc_req, enc_ads, opt_thr)
+        print(f"dbg req: {[str(fact) for fact in enc_req]}")
+        found_ad_idx_list = searcher.search(enc_req, enc_ads)
         if len(found_ad_idx_list) == 0:
             print("(no matches found)")
             continue
 
         for pt_idx, ad_idx in enumerate(found_ad_idx_list, start=1):
             print(f"\t{pt_idx}. {ads[ad_idx]}")
+            print(f"dbg ad: {[str(fact) for fact in enc_ads[ad_idx]]}\n\n")
         print(f"({len(found_ad_idx_list)} advertisements found, {len(ads)} scanned)")
 
     print("Goodbye!")
