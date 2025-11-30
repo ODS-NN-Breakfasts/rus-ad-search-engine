@@ -4,6 +4,7 @@ import rdflib
 
 INITIAL_WORDS = ["одежда"]
 
+
 def make_ontology(wn, ont_g, init_word_list):
 
     def _ont_obj(ent):

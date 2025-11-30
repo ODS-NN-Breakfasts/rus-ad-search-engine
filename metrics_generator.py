@@ -34,34 +34,34 @@ def calc_dataset_metrics(overwrite_flag):
     end_load_time = time.time()
     print(f"(encoding took {int(end_load_time - beg_load_time)} seconds)")
 
-    print("Calculating match probabilities...")
-    matching_probs = []
-    for req_id, enc_req in enumerate(enc_requests, start=1):
-        matching_probs.append(searcher.get_probs(enc_req, enc_ads))
-    matching_probs = np.asarray(matching_probs)
-    assert np.max(matching_probs) <= 1
-    assert np.min(matching_probs) >= 0
+    # print("Calculating match probabilities...")
+    # matching_probs = []
+    # for req_id, enc_req in enumerate(enc_requests, start=1):
+    #     matching_probs.append(searcher.get_probs(enc_req, enc_ads))
+    # matching_probs = np.asarray(matching_probs)
+    # assert np.max(matching_probs) <= 1
+    # assert np.min(matching_probs) >= 0
 
-    print("Calculating optimal threshold...")
-    opt_threshold = metrics.calc_optimal_threshold(matching_probs, true_markup, len(requests), len(ads))
-    direct_markup = metrics.convert_probs_to_markup(matching_probs, opt_threshold, len(requests), len(ads))
+    # print("Calculating optimal threshold...")
+    # opt_threshold = metrics.calc_optimal_threshold(matching_probs, true_markup, len(requests), len(ads))
+    # direct_markup = metrics.convert_probs_to_markup(matching_probs, opt_threshold, len(requests), len(ads))
 
-    print("Searching with optimal threshold...")
+    print("Searching...")
     pred_markup = {}
     for req_id, enc_req in enumerate(enc_requests, start=1):
-        pred_ad_idx_list = searcher.search(enc_req, enc_ads, opt_threshold)
+        pred_ad_idx_list = searcher.search(enc_req, enc_ads)
         if len(pred_ad_idx_list) > 0:
             # searcher.search() returns 0-based list indices (the list contains all lines from input file),
             # but advertisement id is 1-based line number
             pred_markup[str(req_id)] = [str(idx + 1) for idx in pred_ad_idx_list]
     # searcher returns matches, sorted by matching probability, so we re-sort the arrays for this comparison
-    assert {k: list(sorted(v)) for k, v in pred_markup.items()} == {k: list(sorted(v)) for k, v in direct_markup.items()}
+    # assert {k: list(sorted(v)) for k, v in pred_markup.items()} == {k: list(sorted(v)) for k, v in direct_markup.items()}
 
     print("Calculating stats...")
     confusion_matrix = metrics.calc_confusion_matrix(true_markup, pred_markup, n_ads=len(ads), n_requests=len(requests))
     all_stats = metrics.calc_all_stats(confusion_matrix)
     all_stats["conf_matr"] = confusion_matrix
-    all_stats["threshold"] = opt_threshold
+    all_stats["threshold"] = 1  # not used for ontology approach
 
     metrics.compare_with_saved_stats(all_stats, confusion_matrix)
 

@@ -1,57 +1,62 @@
 from typing import List, Any
 
-import sentence_transformers
-import scipy
-#import numpy as np
+import rdflib
+import pymorphy3
+
+from search_pipeline import text_parser
 
 
-# Loading of this model constantly produce a false warning about non-initialized weights. A similar one is
-# described here: https://huggingface.co/FacebookAI/roberta-large-mnli/discussions/7. It looks like the only
-# way to disable this warning is to turn off all warnings from Huggingface.
-NLP_MODEL = sentence_transformers.SentenceTransformer(
-    "ai-forever/ru-en-RoSBERTa",
-    local_files_only=True,  # set to False to download model for the first time
-)
-
-DEFAULT_PROB_THR = 0.5
-
-
-def _preprocess(text: str) -> str:
-    text = text.replace("\\n", "\n")
-    text = text.strip()
-    text = text.lower()  # many words have vectors only in lowercase
-    return text
+ONTOLOGY = rdflib.Graph()
+ONTOLOGY.parse(source="search_pipeline/ontology.ttl", format="turtle")
+MORPH_AN = pymorphy3.MorphAnalyzer()
+SIZE_RULE = text_parser.create_size_info_rule()
+ONT_STAT = text_parser.calc_ontology_stat(ONTOLOGY)
 
 
 def encode_strings(string_list: List[str]) -> List[Any]:
-    encoded_list = NLP_MODEL.encode([_preprocess(string) for string in string_list], normalize_embeddings=True)
+    encoded_list = [text_parser.extract_facts(string, ONTOLOGY, ONT_STAT, MORPH_AN, SIZE_RULE) for string in string_list]
     return encoded_list
 
 
+def _are_facts_close(ont: Any, req_facts: List[Any], ad_facts: List[Any]):
+    for req_fact in req_facts:
+        for ad_fact in ad_facts:
+            if req_fact.class_name != ad_fact.class_name:
+                if text_parser._get_relation(ont, req_fact.parsed_name, ad_fact.parsed_name, is_attr=False) != 1:
+                    continue
+            ad_size = ad_fact.parsed_size_info
+            req_size = req_fact.parsed_size_info
+            if req_size is not None and ad_size is not None:
+                if max(req_size) < min(ad_size) or min(req_size) > max(ad_size):
+                    # any intersection of sized is a match, but no intersection means no match
+                    continue
+            is_match = True
+            for attr_name in req_fact.props.keys():
+                ad_attr = ad_fact.props.get(attr_name, None)
+                req_attr = req_fact.props.get(attr_name, None)
+                if req_attr is not None and ad_attr is not None:
+                    # different attributes are not match, but if this attribute is omitted in request or ad, this is still match
+                    if req_attr != ad_attr:
+                        is_match = False
+                        break
+            if not is_match:
+                continue
+            # even one matched fact is complete match between request and ad
+            return True
+    return False
+
+
 def get_probs(encoded_request: Any, encoded_ad_list: List[Any]) -> List[int]:
-
-    def cosine_sim(x, y):
-        dst = scipy.spatial.distance.cosine(x, y)  # range is from 0 to 2
-        return 1 - (dst/2)
-
-    def euc_sim(x, y):
-        dst = np.sqrt(np.sum((x-y)**2))/(np.sqrt(np.sum(x**2)) + np.sqrt(np.sum(y**2)))
-        return 1 - dst
-
-    probs = [cosine_sim(encoded_request, enc_ad) for enc_ad in encoded_ad_list]
-    #probs = [euc_sim(encoded_request, enc_ad) for enc_ad in encoded_ad_list]
+    probs = [1 if _are_facts_close(ONTOLOGY, encoded_request, enc_ad) else 0 for enc_ad in encoded_ad_list]
     return probs
 
 
-def search(encoded_request: Any, encoded_ad_list: List[Any], prob_thr=DEFAULT_PROB_THR) -> List[int]:
+def search(encoded_request: Any, encoded_ad_list: List[Any]) -> List[int]:
     probs = get_probs(encoded_request, encoded_ad_list)
     found_idx_list = []
     for idx, prob in enumerate(probs):
-        # NOTE: it is extremely important to use ">=" here, as sklearn.metrics.roc_curve() may return
-        # a threshold that is equal to some edge level in probs, so the difference between ">" and ">="
-        # will become crusual, not just a small deviation
-        if prob >= prob_thr:
-            found_idx_list.append((idx, prob))
+        if prob == 1:
+            found_idx_list.append(idx)
 
     # return indexes sorted by largest probability
-    return [item[0] for item in sorted(found_idx_list, reverse=True, key=lambda item: item[1])]
+    return found_idx_list
