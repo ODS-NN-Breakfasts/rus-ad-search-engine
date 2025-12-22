@@ -3,8 +3,11 @@ from typing import List, Any
 import rdflib
 import pymorphy3
 
+from search_pipeline import topic_classifier
 from search_pipeline import text_parser
 
+
+TOPIC_CLF = topic_classifier.load_model()
 
 ONTOLOGY = rdflib.Graph()
 ONTOLOGY.parse(source="search_pipeline/ontology.ttl", format="turtle")
@@ -14,7 +17,11 @@ ONT_STAT = text_parser.calc_ontology_stat(ONTOLOGY)
 
 
 def encode_strings(string_list: List[str]) -> List[Any]:
-    encoded_list = [text_parser.extract_facts(string, ONTOLOGY, ONT_STAT, MORPH_AN, SIZE_RULE) for string in string_list]
+    are_about_cloth = topic_classifier.are_ads_about_clothes(TOPIC_CLF, string_list)
+    encoded_list = [
+        text_parser.extract_facts(string, ONTOLOGY, ONT_STAT, MORPH_AN, SIZE_RULE) if is_about_cloth else []
+        for string, is_about_cloth in zip(string_list, are_about_cloth)
+    ]
     return encoded_list
 
 
