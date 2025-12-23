@@ -21,3 +21,4 @@ research/slovnet_syntax_news_v1.tar
 research/ruwordnet-2021.db
 
 smolvlm/
+research/multiproces_vlm.py
